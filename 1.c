@@ -14,3 +14,19 @@ void mudaGanho(double* dados, int n_amostras, double ganho)
         }
     }
 }
+
+
+// Alterado
+
+
+void mudaGanho(double* dados, int n_amostras, double ganho) 
+{   
+    int i;
+
+    // Analisa as amostras e aplica o ganho
+    for (i = 0; i < n_amostras; i++) 
+    {
+        dados[i] *= ganho;
+    }
+}
+
