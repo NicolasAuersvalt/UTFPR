@@ -32,7 +32,8 @@ Para obter uma comunicação eficiente com o Arduino, é fundamental definir tok
 
 Ao mover o joystick para cima, receberemos valores crescentes até 255 pelo parâmetro 1. De maneira análoga, ao movê-lo para baixo, receberemos valores decrescentes, tendendo a 0 pelo mesmo parâmetro. Além disso, destaca-se que a taxa de transmissão entre dados é de 9600 Hz. 
 
- 
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Diagrama.PNG">
+
 
 ## ESP8266 
 
