@@ -21,8 +21,6 @@ Arduino Uno R3 Blackboard;
 
 Sensor de Temperatura e de Umidade (DHT11) (opcional). 
 
-EXPLICAÇÃO DAS PARTES DOS CIRCUITOS 
-
 ## BLYNK 
 
 No aplicativo “Blynk”, é essencial criar um “template” com pinos virtuais, estes empregando o V0 para a movimentação no eixo X e o V1 para a movimentação no eixo Y. 
