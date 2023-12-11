@@ -7,7 +7,7 @@ O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um
 
  
 
-/t MATERIAIS 
+## MATERIAIS 
 
 Neste projeto foram utilizados os seguintes materiais: 
 
@@ -23,7 +23,7 @@ Sensor de Temperatura e de Umidade (DHT11) (opcional).
 
 EXPLICAÇÃO DAS PARTES DOS CIRCUITOS 
 
-BLYNK 
+## BLYNK 
 
 No aplicativo “Blynk”, é essencial criar um “template” com pinos virtuais, estes empregando o V0 para a movimentação no eixo X e o V1 para a movimentação no eixo Y. 
 
@@ -33,7 +33,7 @@ Ao mover o joystick para cima, receberemos valores crescentes até 255 pelo par�
 
  
 
-ESP8266 
+## ESP8266 
 
 O ESP8266 é um módulo de comunicação sem fio que integra um microcontrolador com suporte Wi-Fi. Frequentemente é utilizado em projetos de IoT (“Internet of Things”) permitindo a comunicação e troca de dados sem fio entre dispositivos. 
 
