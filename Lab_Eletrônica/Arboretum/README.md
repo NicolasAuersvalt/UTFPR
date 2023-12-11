@@ -6,7 +6,7 @@ O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um
 
  
 
-MATERIAIS 
+/t MATERIAIS 
 
 Neste projeto foram utilizados os seguintes materiais: 
 
