@@ -1,5 +1,5 @@
-__### ARBORETUM__
-Como projeto final da disciplina de Introdução às práticas de laboratório em eletricidade e eletrônica (ELEX10) foi realizado uma miniatura de um "Arboretum" ou arboreto, um local onde árvores, arbustos e plantas herbáceas são cultivadas para fins	 científicos e educacionais. 
+### ARBORETUM
+Como projeto final da disciplina de Introdução às práticas de laboratório em eletricidade e eletrônica (ELEX10) foi realizado uma miniatura de um "_Arboretum_" ou arboreto, um local onde árvores, arbustos e plantas herbáceas são cultivadas para fins	 científicos e educacionais. 
 
 Nesse trabalho foi necessário utilização de uma impressora 3D oferecida pelo Departamento Acadêmico de Eletrônica (DAELN) da Universidade Tecnológica Federal do Paraná (UTFPR) para a impressão do cubo, onde a planta será contida. 
 
