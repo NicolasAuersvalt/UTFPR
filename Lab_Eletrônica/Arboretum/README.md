@@ -1,3 +1,1 @@
-Carro robótico equipado com dois motores amarelos DC 3/6v.​
-Movimentação dos motores conforme os dados do joystick.​
-Implementação de componentes para o arboretum controlado remotamente.​
+O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um módulo ESP8266, um adaptador e um componente Shield L293D. A comunicação do carrinho é realizada no aplicativo mobile Blynk, o qual possuí um joystick e pinos virtuais que tornam o manejo do dispositivo mais dinâmico e divertido. Desse modo, quando a placa ESP8266 estiver conectada a uma rede Wi-Fi predefinida, podemos transmitir os dados do joystick para o Arduino - por meio da recepção (RX) e transmissão (TX) de dados pelo ESP8266. Assim, ao receber esses dados, o Arduino os interpretará e seguidamente executará a movimentação dos motores obedecendo os movimentos do joystick.  
