@@ -51,6 +51,8 @@ O ESP8266 é um módulo de comunicação sem fio que integra um microcontrolador
 
 Contudo, no projeto foi realizado a comunicação do ESP8266 pela porta analógica, apropriando-se da ligação RX/TX. Inicialmente, a placa se conecta à rede Wi-Fi. Estabelecendo-se essa conexão, o ESP8266 procura se vincular com o “Blynk”. 
 
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Trás.jpeg" width="500">
+
 Nesse contexto, é crucial fornecer uma alimentação separada para os motores, uma vez que a interferência na alimentação pode resultar na captação e recepção de sinais (5V). Deste modo, garante-se um funcionamento mais estável, além de evitar possíveis interferências que poderiam comprometer o desempenho do sistema. 
 
 Ao isolar a alimentação dos motores, conseguimos minimizar os efeitos negativos da interferência, contribuindo para a eficiência e estabilidade do projeto. 
