@@ -32,8 +32,8 @@
 #include <AFMotor.h>
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "nicolas";
-char pass[] = "12345678";
+char ssid[] = "removido"; 
+char pass[] = "removido";
 
 #define EspSerial Serial1
 
