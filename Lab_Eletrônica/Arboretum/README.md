@@ -1,4 +1,4 @@
-### ARBORETUM
+## ARBORETUM
 Como projeto final da disciplina de Introdução às práticas de laboratório em eletricidade e eletrônica (ELEX10) foi realizado uma miniatura de um "_Arboretum_" ou arboreto, um local onde árvores, arbustos e plantas herbáceas são cultivadas para fins	 científicos e educacionais. 
 
 Nesse trabalho foi necessário utilização de uma impressora 3D oferecida pelo Departamento Acadêmico de Eletrônica (DAELN) da Universidade Tecnológica Federal do Paraná (UTFPR) para a impressão do cubo, onde a planta será contida. 
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=djULl-QYb-8 (Funcionando)
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/9d92f1d38749b4784c52d19773bddba6cb3ab064/Lab_Eletr%C3%B4nica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
 
 
-## MATERIAIS 
+### MATERIAIS 
 
 Neste projeto foram utilizados os seguintes materiais: 
 
@@ -32,7 +32,7 @@ Sensor de Temperatura e de Umidade (DHT11) (opcional).
 
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Projeto.PNG" alt="Arboretum">
 
-## BLYNK 
+### BLYNK 
 
 No aplicativo “Blynk”, é essencial criar um “template” com pinos virtuais, estes empregando o V0 para a movimentação no eixo X e o V1 para a movimentação no eixo Y. 
 
@@ -43,7 +43,7 @@ Ao mover o joystick para cima, receberemos valores crescentes até 255 pelo par�
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Diagrama.PNG">
 
 
-## ESP8266 
+### ESP8266 
 
 O ESP8266 é um módulo de comunicação sem fio que integra um microcontrolador com suporte Wi-Fi. Frequentemente é utilizado em projetos de IoT (“Internet of Things”) permitindo a comunicação e troca de dados sem fio entre dispositivos. 
 
