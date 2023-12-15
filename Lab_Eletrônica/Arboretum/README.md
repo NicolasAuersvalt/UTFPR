@@ -5,7 +5,7 @@ Como projeto final da disciplina de Introdução às práticas de laboratório e
 
 Nesse trabalho foi necessário utilização de uma impressora 3D oferecida pelo Departamento Acadêmico de Eletrônica (DAELN) da Universidade Tecnológica Federal do Paraná (UTFPR) para a impressão do cubo, onde a planta será contida. 
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Led.jpeg">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Led.jpeg" width="300">
 
 O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um módulo ESP8266, um adaptador e um componente Shield L293D. A comunicação do carrinho é realizada no aplicativo mobile Blynk, o qual possuí um joystick e pinos virtuais que tornam o manejo do dispositivo mais dinâmico e divertido. Desse modo, quando a placa ESP8266 estiver conectada a uma rede Wi-Fi predefinida, podemos transmitir os dados do joystick para o Arduino - por meio da recepção (RX) e transmissão (TX) de dados pelo ESP8266. Assim, ao receber esses dados, o Arduino os interpretará e seguidamente executará a movimentação dos motores obedecendo os movimentos do joystick. 
 
