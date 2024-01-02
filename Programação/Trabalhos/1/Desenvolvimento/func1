@@ -1,0 +1,36 @@
+xse = pegaXSE(0);
+yse = pegaYSE(0);
+xid = pegaXID(0);
+yid = pegaXID(0);
+
+// Para cada retângulo no intervalo
+for(ret; ret<n_retangulos; ret++){
+
+   // compara as componentes iniciais
+   if(pegaXSE(ret)>xse){
+      // aumenta o limite da interseção 
+      xse=pegaXSE(ret);
+   }
+   if(pegaYSE(ret)>yse){
+      yse=pegaYSE(ret);
+   }
+   if(pegaXID(ret)>xid){
+      xid=pegaXID(ret);
+   }
+   if(pegaXSE(ret)>yid){
+      yid=pegaYID(ret);
+   }
+
+// calcula a area
+area = ((xid-xse)*(yid-yse));
+
+// se houver interseção 
+if((xse<=id) && (yse<=yid)){
+   return area;
+}
+// Se não houver interseção 
+else
+{
+return 0;
+}
+}

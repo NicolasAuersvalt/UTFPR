@@ -1,0 +1,106 @@
+
+float dist(x1_se, y1_se, x1_id,
+           y1_id, x2_se, y2_se,
+           x2_id, y2_id)
+{
+  float px1_medio = (x1_se + x1_id) / 2.0; // V
+  float py1_medio = (y1_se + y1_id) / 2.0; // V
+
+  float px2_medio = (x2_se + x2_id) / 2.0; // V
+  float py2_medio = (y2_se + y2_id) / 2.0; // V
+
+  // Distância entre duas componentes médias
+  float delta_x = (px1_medio - px2_medio);
+  float delta_y = (py1_medio - py2_medio);
+
+  float distancia_pontos = sqrt((delta_x * delta_x) + (delta_y * delta_y)); // Testar dps
+
+  return distancia_pontos;
+}
+unsigned int encontraParMaisProximo(int n_retangulos)
+{
+
+  // =============================
+
+  int ret1_min = 0, ret2_min = 0,
+      x1_se = 0, y1_se = 0, x1_id = 0, y1_id = 0,
+      x2_se = 0, y2_se = 0, x2_id = 0, y2_id = 0,
+      /*flag = 0,*/
+j = 0;
+
+float distancia = 0.0, dist_min = FLT_MAX;
+
+// =============================
+
+// Para cada retângulo nesse intervalo (loop)
+
+printf("\n Passou aqui\n");
+
+for (int i = 0; i < n_retangulos; i++)
+{
+
+  // printf("\n Retangulo Comparador Selecionado (i = %d)\n", i);
+
+  // Seleciona um retangulo (coordenadas) 1 2
+  printf("\n Retangulos ( i = %d ||| j = %d)\n", i, j);
+
+  x1_se = pegaXSE(i); // 2
+  printf("\n X1 se: %d \n", x1_se);
+
+  y1_se = pegaYSE(i); // 4
+  printf("Y1 se: %d \n", y1_se);
+
+  x1_id = pegaXID(i); // 4
+  printf("X1 id: %d \n", x1_id);
+
+  y1_id = pegaYID(i); // 2
+  printf("Y1 id : %d \n", y1_id);
+
+  // Para cada retângulo depois do selecionado
+  for (j = i + 1; j < n_retangulos; j++)
+  {
+
+    printf("\n Retangulo para comparar ( i = %d ||| j = %d)\n", i, j);
+
+    x2_se = pegaXSE(j);
+    printf("\n X2 se: %d \n", x2_se);
+
+    y2_se = pegaYSE(j);
+    printf("Y2 se: %d \n", y2_se);
+
+    x2_id = pegaXID(j);
+    printf("X2 id: %d \n", x2_id);
+
+    y2_id = pegaYID(j);
+    printf("Y2 id: %d \n", y2_id);
+
+    // Chamada da função da distância
+
+    distancia = dist(x1_se, y1_se, x1_id,
+                     y1_id, x2_se, y2_se,
+                     x2_id, y2_id);
+
+    if (distancia < dist_min)
+    {
+
+      dist_min = distancia;
+
+      // Armazeno os retângulos cuja distância foi mínima
+      ret1_min = i;
+      printf("Retangulo %d \n", ret1_min);
+
+      ret2_min = j;
+      printf("Retangulo 2 %d \n", ret2_min);
+    }
+  }
+}
+
+printf("Distancia minima %f \n", dist_min);
+printf("Retângulo: %d; Retângulo %d \n", ret1_min, ret2_min);
+/*
+  return ((ret1_min * 65536) + ret2_min);
+  */
+
+return (ret1_min << 16) | ret2_min;
+}
+

@@ -1,0 +1,204 @@
+#include <math.h>
+
+#include <float.h>
+
+// =============================
+// Função 1
+// =============================
+
+int calculaInterseccao(int n_retangulos)
+{
+
+  // Cada retângulo eh definido por duas coordenadas.
+  // Ponto superior esquerdo (SE) // x, y
+  // Ponto inferior direito (ID) // x, y
+
+  // Funcao que coleta os dados de varios retangulos e retorna a area total
+  // do retangulo definido como a intersecao deles.
+  // SE = (2, 4)
+  // ID = (4, 2)
+
+  // =============================
+
+  int x3_se = 0, y3_se = 0, x3_id = 0, y3_id = 0,
+      x4_se = 0, y4_se = 0, x4_id = 0, y4_id = 0,
+      inter_xi, inter_xf, inter_yi, inter_yf,
+      ha_intersecao = 1, x_max, y_max, tx = 0, ty = 0, inter_minx = 0, inter_maxx,
+      inter_miny = 0, inter_maxy;
+
+  // =============================
+
+  // Percorre cada retângulo dada a quantidade
+
+  // n_retangulos = 2
+
+  // Retangulo Referência
+  for (int k = 0; k < n_retangulos; k++) // V
+  {
+
+    //printf("\n ============================ \n");
+
+    // printf("\n Para k = %d\n", k);
+
+    // Coleta as coordenadas
+    x3_se = pegaXSE(k);
+    y3_se = pegaYSE(k);
+
+    x3_id = pegaXID(k);
+    y3_id = pegaYID(k);
+
+    //printf("\n Retangulo Comparador %d \n(%d, %d) (%d, %d)\n", k, x3_se, y3_se, x3_id, y3_id);
+
+    // printf("\nSuperior Esquerdo (%d, %d)\n", x3_se, y3_se);
+    // printf("\nInferior Direito Esquerdo (%d, %d)\n \n", x3_id, y3_id);
+
+    // Não preciso me preocupar em x_se < x_id ou y_id > y_se
+
+    // Retangulo comparação
+    for (int l = (k + 1); l < n_retangulos; l++) // V
+    {
+      int flagy = 1, flagx = 1;
+
+      // printf("\nValores de: %d, %d\n", k, l);
+
+      x4_se = pegaXSE(l);
+      y4_se = pegaYSE(l);
+      x4_id = pegaXID(l);
+      y4_id = pegaYID(l);
+
+      //printf("\n Retangulo sendo Comparado %d \n(%d, %d) (%d, %d)\n", l, x4_se, y4_se, x4_id, y4_id);
+      // printf("\nSuperior Esquerdo (%d, %d)\n", x4_se, y4_se);
+      // printf("\nInferior Direito Esquerdo (%d, %d)\n", x4_id, y4_id);
+
+      //printf("\n ============================ \n");
+
+      if (x4_id > x3_id)
+      {
+        x_max = x3_id;
+        // printf("\nX4_ID MAXIMO inferiores entre %d e %d é %d\n", x3_id, x4_id, x_max);
+      }
+      else if (x3_id > x4_id)
+      {
+        x_max = x4_id;
+        // printf("\nX3_ID MAXIMO inferiores %d e %d é %d\n", x3_id, x4_id, x_max);
+      }
+      if (y4_se > y3_se)
+      {
+        y_max = y3_se; // Testando com os mínimos
+        // printf("\nY4_SE MAXIMO inferiores %d e %d é %d\n", y4_se, y3_se, y_max);
+      }
+      else if (y3_se > y4_se)
+      {
+        y_max = y4_se; // Testando com os mínimos
+        // printf("\nY3_SE MAXIMO inferiores %d e %d é %d\n", y4_se, y3_se, y_max);
+      }
+
+      // Se t estiver nesse intervalo da interseção
+      for (tx = 0; tx <= x_max; tx++)
+      {
+        // T está na interseção
+        if (((tx >= x3_se) && (tx <= x3_id)) && ((tx >= x4_se) && (tx <= x4_id)))
+        {
+
+          // Determina a interseção inicial e define a final para ser somada.
+          if (flagx == 1)
+          {
+            if(inter_maxx<inter_xi){
+              inter_maxx=inter_xi;
+            }
+
+            inter_xi = tx;
+            inter_xf = tx;
+            // printf("\n A interseção Inicial é: XI %d\n", inter_xi);
+            // printf("\n A interseção Inicial é: XF %d\n", inter_xf);
+            flagx++;
+          }
+          else if (flagx > 1)
+          {
+            // Interseção final começa a ser determinada
+            inter_xf += 1;
+            flagx++;
+          }
+
+          // Caso não houver interseção, já será retornado 0.
+
+          // printf("\n Tx = %d \n", tx);
+        }
+      }
+      if (flagx == 1)
+      {
+        //printf("Passou aqui ;-; flagx\n");
+        return 0;
+      }
+      // printf("\n ============================ \n");
+      // printf("\n A interseção Inicial é: XI %d\n", inter_xi);
+      // printf("\n A interseção Final é: XF %d\n", inter_xf);
+      // printf("\n Flag foi de  %d\n", flagx);
+
+      for (ty = 0; ty <= y_max; ty++)
+      {
+        // T está na interseção
+        if (((ty >= y3_id) && (ty <= y3_se)) && ((ty >= y4_id) && (ty <= y4_se)))
+        {
+          // Determina a interseção inicial e define a final para ser somada.
+          if (flagy == 1)
+          {
+            if(inter_maxy<inter_yi){
+              inter_maxy=inter_yi + 1;
+            }
+
+            inter_yi = ty;
+            inter_yf = ty;
+            // printf("\n A interseção Inicial é: YI %d\n", inter_yi);
+            // printf("\n A interseção Inicial é: YF %d\n", inter_yf);
+
+            flagy++;
+          }
+          else if (flagy > 1)
+          {
+            // Interseção final começa a ser determinada
+            inter_yf += 1;
+            //printf("\n A interseção final é: YI %d\n", inter_yf);
+            flagy++;
+          }
+          // printf("\n Ty = %d \n", ty);
+        }
+      }
+      if (flagy == 1)
+      {
+        //printf("Passou aqui flagy ;-;");
+        return 0;
+      }
+      // printf("\n ============================ \n");
+      // printf("\n A interseção Inicial é: YI %d\n", inter_yi);
+      // printf("\n A interseção Final é: YF %d\n", inter_yf);
+      // printf("\n Flag foi de %d\n", flagy);
+
+      // Armazena as interseções
+
+      if (inter_xf < inter_maxx)
+      { // Limitou mais o x maximo
+        inter_maxx = inter_xf;
+      }
+      if (inter_xi > inter_minx)
+      { // Limita mais o x minimo
+        inter_minx = inter_xi;
+      }
+      if (inter_yf < inter_maxy)
+      { // Limita mais o y maximo
+        inter_maxy = inter_yf;
+      }
+      if (inter_yi > inter_miny)
+      { // Limita mais o y minimo
+        inter_miny = inter_yi;
+      }
+    }
+  }
+  // cálculo da área da interseção
+  unsigned int area = ((inter_maxx - inter_minx) * (inter_maxy - inter_miny));
+  //printf("\n A área entre X(%d - %d) e Y(%d - %d) é de %d \n", inter_maxx, inter_minx, inter_maxy, inter_miny, area);
+
+  // retorna a área
+
+  return area;
+}
