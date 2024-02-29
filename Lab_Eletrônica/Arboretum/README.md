@@ -32,6 +32,7 @@ Arduino Uno R3 Blackboard;
 
 Sensor de Temperatura e de Umidade (DHT11) (opcional). 
 
+Esta foi uma inspiração e serviu como base para o desenvolvimento.
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Projeto.PNG" alt="Arboretum">
 
 ### BLYNK 
