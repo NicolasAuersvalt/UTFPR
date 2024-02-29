@@ -9,9 +9,9 @@ O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um
 
 Exemplo de funcionamento:
 
-[Tank antigo, tudo foi desenvolvido nele.](https://youtu.be/343yUzrjcDY)<br>
-[Com Problemas.](https://youtu.be/MywrVtYvrxg)<br>
-[Funcionando.](https://www.youtube.com/watch?v=djULl-QYb-8)<br>
+[Tank antigo, tudo foi desenvolvido nele;](https://youtu.be/343yUzrjcDY)<br>
+[Com Problemas;](https://youtu.be/MywrVtYvrxg)<br>
+[Funcionando;](https://www.youtube.com/watch?v=djULl-QYb-8)<br>
 [Ligando.](https://youtube.com/shorts/QOh1b2ECXVc)<br>
 
 
