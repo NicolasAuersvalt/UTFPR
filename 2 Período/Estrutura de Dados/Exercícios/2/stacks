@@ -1,0 +1,44 @@
+#include "queue.h"
+
+int main () {
+  int i, n = 10;	
+  Queue *par, *impar; // Mesmo tipo
+
+  /*Use somente as operações definidas em queue.h*/
+
+  // Input - inteiros
+  
+  // verifica se é par ou não
+  
+  // Cria stack para par e outra para impar
+  
+   par =  create(n); // n max de elementos possíveis
+   impar = create(n);
+
+
+  for(i=0; i<n; i++){
+
+    int elem = rand();
+     
+     // Ser par
+  if(elem%2==0){
+    // Armazena na stack par
+    enqueue(par, elem); 
+  }
+  // Impar
+  else{
+    enqueue(impar ,elem);
+  }
+
+   }
+
+   printf("Par:");
+   print(par);
+   printf("\n Impar: ");
+   print(impar);
+  
+	
+  /*Não use para resolver esse exercício o operador -> aqui!*/
+  /*Terminar*/
+  return 0;
+}
