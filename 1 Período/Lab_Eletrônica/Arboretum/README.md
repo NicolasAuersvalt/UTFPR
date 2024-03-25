@@ -15,7 +15,7 @@ Exemplo de funcionamento:
 [Ligando.](https://youtube.com/shorts/QOh1b2ECXVc)<br>
 
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/tree/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
 
 
 ### MATERIAIS 
