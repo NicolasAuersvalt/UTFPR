@@ -23,9 +23,9 @@ int main () {
   int k;
   List *l = NULL;
   for (k = 0; k <= 4; k++) 
-    l = insert (l, k);
+    l = insert_back (l, k);
   for (k = 9; k >= 5; k--) 
-    l = insert (l, k);
+    l = insert_back (l, k);
   print (l);
   printf("Sum = %d\n", sum(l));
   destroy (l);
