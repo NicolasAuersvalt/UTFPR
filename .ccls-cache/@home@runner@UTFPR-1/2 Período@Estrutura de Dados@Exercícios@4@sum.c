@@ -18,7 +18,6 @@ int sum (List *l) {
 
 }
 
-
 /* */
 int main () {
   int k;
