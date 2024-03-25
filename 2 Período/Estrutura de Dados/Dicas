@@ -8,6 +8,21 @@ Comandos com vim:
  
     :set number
 
+  Copiar
+
+    yy
+
+  Recortar
+
+    dd
+
+  Colar
+
+    p
+
+  Selecionar
+
+    Esc -> V
 
 
 // Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
