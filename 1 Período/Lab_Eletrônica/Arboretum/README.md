@@ -33,7 +33,7 @@ Arduino Uno R3 Blackboard;
 Sensor de Temperatura e de Umidade (DHT11) (opcional). 
 
 Esta foi uma inspiração e serviu como base para o desenvolvimento.
-<img src="https://github.com/NicolasAuersvalt/UTFPR/tree/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Projeto.PNG" alt="Arboretum">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Projeto.PNG" alt="Arboretum">
 
 ### BLYNK 
 
@@ -43,7 +43,7 @@ Para obter uma comunicação eficiente com o Arduino, é fundamental definir tok
 
 Ao mover o joystick para cima, receberemos valores crescentes até 255 pelo parâmetro 1. De maneira análoga, ao movê-lo para baixo, receberemos valores decrescentes, tendendo a 0 pelo mesmo parâmetro. Além disso, destaca-se que a taxa de transmissão entre dados é de 9600 Hz. 
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/tree/main/1%20Período/Lab_Eletrônica/Arboretum/Diagrama.PNG">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Diagrama.PNG">
 
 
 ### ESP8266 
@@ -52,16 +52,16 @@ O ESP8266 é um módulo de comunicação sem fio que integra um microcontrolador
 
 Contudo, no projeto foi realizado a comunicação do ESP8266 pela porta analógica, apropriando-se da ligação RX/TX. Inicialmente, a placa se conecta à rede Wi-Fi. Estabelecendo-se essa conexão, o ESP8266 procura se vincular com o “Blynk”. 
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/tree/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Trás.jpeg" width="500">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Trás.jpeg" width="500">
 
 Nesse contexto, é crucial fornecer uma alimentação separada para os motores, uma vez que a interferência na alimentação pode resultar na captação e recepção de sinais (5V). Deste modo, garante-se um funcionamento mais estável, além de evitar possíveis interferências que poderiam comprometer o desempenho do sistema. 
 
 Ao isolar a alimentação dos motores, conseguimos minimizar os efeitos negativos da interferência, contribuindo para a eficiência e estabilidade do projeto. 
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/tree/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Led.jpeg" width="500">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Led.jpeg" width="500">
 
 ## SHIELD L293D 
 
 O Shield L293D é um componente que fornece controle de motores para projetos que tem como base fundamental o Arduino. Comumente é aplicado para o manuseio da direção e velocidade de motores de corrente contínua (DC).
 
-<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/Lab_Eletr%C3%B4nica/Arboretum/Images/Cima.jpeg" width="500">
+<img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Período/Lab_Eletrônica/Arboretum/Images/Cima.jpeg" width="500">
