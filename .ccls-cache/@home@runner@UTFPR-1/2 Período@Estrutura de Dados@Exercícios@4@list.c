@@ -92,4 +92,9 @@ void destroy (List *l) {
     free (l); 
     l = t;    
   }  
+
+  int size(){
+
+    
+  }
 }
