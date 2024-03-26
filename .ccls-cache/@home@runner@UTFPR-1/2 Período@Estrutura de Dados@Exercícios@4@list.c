@@ -91,10 +91,52 @@ void destroy (List *l) {
     List *t = l->next; 
     free (l); 
     l = t;    
-  }  
-
-  int size(){
-
-    
+  }      
   }
+
+int size(List *l){
+
+	int size;
+
+	List *t;
+
+	for(t=l;t!=NULL;t=t->next){
+		size++;
+	}
+
+
+	return size;
+}
+
+int max(List *l){
+
+	int max;
+	List *t;
+
+	// Verifica se há elementos inciais
+	if(t==NULL){
+		return 0;
+	}
+
+	// Armazena o primeiro para comparação
+	max = t->data;
+
+	// Verifica se há maiores
+	for(t=l;t!=NULL; t=t->next){
+	   if(t->data > max)
+		   max  = t->data;
+	
+	}
+
+
+}
+
+int similar(List *l, List *m){
+
+   for(; l!=NULL; l=l->next){
+      if(l->data!=m->data) return TRUE;
+   }
+   return FALSE;
+
+
 }

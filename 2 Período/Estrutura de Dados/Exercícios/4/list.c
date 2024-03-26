@@ -133,10 +133,10 @@ int max(List *l){
 
 int similar(List *l, List *m){
 
-   for(l; l!=NULL; l=l->next){
-      if(l->data!=m->data) return true;
+   for(; l!=NULL; l=l->next){
+      if(l->data!=m->data) return TRUE;
    }
-   return false;
+   return FALSE;
 
 
 }
