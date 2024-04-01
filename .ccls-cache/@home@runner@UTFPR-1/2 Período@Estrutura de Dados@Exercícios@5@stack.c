@@ -7,28 +7,49 @@ Stack* create () {
 void destroy (Stack *s) {
   while (s != NULL) {
     /*Terminar*/
+    Stack *apoio = s->next; // PROVA
+    free(s);
+    s = apoio;
   }	  
 }
 
 Stack* push (Stack *s, int elem) {
-  /*Terminar*/
-  /*Cria um elemento (malloc) e insere no início da lista.*/	
+  
+  Stack *novo = (Stack *)malloc(sizeof(Stack));
+  novo->data = elem;
+  novo->next = s;
+  return novo;
 }
 
 Stack* pop (Stack *s) {
   /*Terminar*/
-  /*Remove o elemento (free) do início da lista.*/	
+  if(s==NULL){
+    return 0;
+  }
+  
+  Stack *apoio = s->next;
+  free(s);
+  s = apoio;
+  return s;
 }
 
 int get_peek (Stack *s) {
-  /*Terminar*/
-  /*Retorna a informação (data) armazenada no início da lista.*/	
+
+  if(empty(s))
+    return 0;
+
+  return s->data;
 }
 
 int empty (Stack *s) {
-  /*Terminar*/
+  return (s == NULL);
 }
 
 void print (Stack *s) {
-  /*Terminar*/
+  Stack *apoio=s;
+  printf("Stack: ");
+  while(apoio->next != NULL)
+    printf("%d", apoio->data);
+
+  printf("\n");
 }

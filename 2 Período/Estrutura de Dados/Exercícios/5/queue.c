@@ -26,11 +26,11 @@ Queue* enqueue (Queue *q, int elem) {
   if(q==NULL)
     return novo;
   else{
-      Queue *t = q;
-      while(t->next != NULL)
-        t=t->next;
+    Queue *t = q;
+    while(t->next != NULL)
+      t=t->next;
     t->next = novo;
-      return q;
+    return q;
   }
 }
 
