@@ -17,36 +17,19 @@ List* insert (List *l, int elem) {
 List* insert_back (List *l, int elem) {
   /* Terminar! */
   
-  List *t=l, *node;
-
-  // Sem nenhum elemento
-
-  if(t->next==NULL){
-
-    // Aloca Espaço
-    node = (List*) malloc (sizeof(List));
-    
-    node->next = NULL;
-    node->data = elem;
-    
+  List *node = (List *)malloc(sizeof(List));
+  node->data = elem;
+  node->next = NULL;
+  if(l==NULL){
     return node;
   }
-
-  // Percorre até chegar na cauda
-  for(; t->next != NULL; t=t->next);
-
-  // Aloca espaço
-  node = (List*) malloc (sizeof(List));
-
-  // T que apontava para null apontará para node
-  t->next = node;
-
-  // Node armazena elemento e aponta para null
-  node->next = NULL;
-  node->data = elem;
-
-  return l;
-  
+  else{
+    List *t = l;
+    while(t->next !=NULL)
+      t = t->next;
+    t->next = node;
+    return l;
+  }
 }
 
 /* */

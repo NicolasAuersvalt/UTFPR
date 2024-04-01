@@ -1,101 +1,161 @@
-// Par_Impar
+ // SUM
 
-#include "queue.h"
-#include <time.h>
+#include "list.h"
 
+/* */
+int sum (List *l) {
+  /*Terminar!*/	
 
-int main () {
-  srand(time(NULL));
-  int i=0, n = 10;	
-  Queue *par = create(n);
-  Queue *impar = create(n);
-  while(i<n){
-    int sorteio = rand() % 100;
-    if((sorteio%2)==0)
-      enqueue(par, sorteio);
-    else
-      enqueue(impar, sorteio);
-    i++;
+   int sum=0;
+   
+   List *t;
+
+   for(t=l; t != NULL; t= t->next){ // o(n+1)
+	   
+     sum += t->data;
+
   }
-  print(par);  
-  print(impar);
-  destroy(par);
-  destroy(impar);
 
+   return sum;
+
+}
+
+/* */
+int main () {
+  int k;
+  List *l = NULL;
+  for (k = 0; k <= 4; k++) 
+    l = insert (l, k);
+  for (k = 9; k >= 5; k--) 
+    l = insert (l, k);
+  print (l);
+  printf("Sum = %d\n", sum(l));
+  destroy (l);
   return 0;
 }
 
 
 
-// Jackpot
 
-#include "queue.h"
-#include <time.h>
 
-void jackpot (int n, int r) {
-  /*Terminar*/
 
-  int i, encontrou = 1, pri, sec, ter, elem;
 
-  // Gera-se 3 filas
+// Insert Back
 
-  // 3 Carretéis fixos, não n carretéis
-  Queue *carretel1, *carretel2, *carretel3;
-
-  carretel1 = create(r);
-  carretel2 = create(r);
-  carretel3 = create(r);
-
-  for(i=0; i<r-1; i++){
-    enqueue(carretel1, i);
-    enqueue(carretel2, i);
-    enqueue(carretel3, i);
+List* insert_back (List *l, int elem) {
+  /* Terminar! */
+  
+  List *node = (List *)malloc(sizeof(List));
+  node->data = elem;
+  node->next = NULL;
+  if(l==NULL){
+    return node;
   }
-
-  while(encontrou){
-
-    // Variáveis de apoio
-
-    pri = rand() % 10;
-    sec = rand() % 10;
-    ter = rand() % 10;
-
-    // print
-
-    for(i=0; i<pri; i++){
-      elem = dequeue(carretel1);
-
-      enqueue(carretel1, elem);
-    }
-    for(i=0; i<sec; i++){
-      elem = dequeue(carretel2);
-
-      enqueue(carretel2, elem);
-    }
-    for(i=0; i<ter; i++){
-      elem = dequeue(carretel3);
-
-      enqueue(carretel3, elem);
-    }
-
-    // Substitui o valor das variáveis de apoio
-
-    pri = front(carretel1);
-    sec = front(carretel2);
-    ter = front(carretel3);
-
-    printf("\n%d %d %d", pri, sec, ter);
-
-    if((pri == sec) && (sec==ter)){
-      printf(" -> Ganhou!");
-      encontrou = 0;
-    }
-  }  
+  else{
+    List *t = l;
+    while(t->next !=NULL)
+      t = t->next;
+    t->next = node;
+    return l;
+  }
 }
 
+
+
+
+
+
+// In (sem o insert_back)
+
+/* */
+int in (List *l, int k) {
+  /*Terminar!*/	
+
+  // *t
+  
+  List *t;
+
+  for(t=l; ((t!=NULL)); t=t->next){
+
+     if((t->data)==k)
+       return 1;
+
+  }
+  return 0;
+}
+
+/* */
 int main () {
-  srand(time(NULL));	
-  int n = 3;  /*número de carretéis*/ 
-  int r = 10; /*sequência de números em cada carretel*/ 
-  jackpot (n, r);
+  int k;
+  List *l = NULL;
+  for (k = 0; k <= 4; k++) 
+    l = insert (l, k);
+  for (k = 9; k >= 5; k--) 
+    l = insert (l, k);
+  print (l);
+  printf("Pertence %d = %d?\n", 9, in(l, 9));
+  printf("Pertence %d = %d?\n", -1, in(l, -1));
+  destroy (l);
+  return 0;
+}
+
+/* */
+int main () {
+  int k;
+  List *l = NULL;
+  for (k = 0; k <= 4; k++) 
+    l = insert (l, k);
+  for (k = 9; k >= 5; k--) 
+    l = insert (l, k);
+  print (l);
+  printf("Pertence %d = %d?\n", 9, in(l, 9));
+  printf("Pertence %d = %d?\n", -1, in(l, -1));
+  destroy (l);
+  return 0;
+}
+
+
+
+
+
+
+
+// Merge
+
+List *merge(List *A, List *B) {
+    List *C = NULL;
+    List *T = NULL; 
+
+    if (A == NULL)
+        return B;
+    if (B == NULL)
+        return A;
+
+    if (A->data <= B->data) {
+        C = A;
+        A = A->next;
+    } else {
+        C = B;
+        B = B->next;
+    }
+
+    T = C; 
+
+    while (A != NULL && B != NULL) {
+        if (A->data <= B->data) {
+            T->next = A;
+            A = A->next;
+        } else {
+            T->next = B;
+            B = B->next;
+        }
+        T = T->next; 
+    }
+
+    if (A != NULL)
+        T->next = A;
+    else if (B != NULL)
+        T->next = B;
+
+    return C;
 }

@@ -1,63 +1,43 @@
 #include "list.h"
 
 List *merge(List *A, List *B) {
-  /*Terminar*/
-  List *c, *a, *b;
+    List *C = NULL;
+    List *T = NULL; 
 
-  c = (List *)malloc(sizeof(List));
+    if (A == NULL)
+        return B;
+    if (B == NULL)
+        return A;
 
-  for (/*  */; (a != NULL) || (b != NULL); /*  */) {
-    // Primeiro verifica se algum deles é nulo
-
-    if (a->data == b->data) {
-      // coloca os dois elementos em seguida
-
-      c->data = a->data;
-
-      // Desloca
-      c = c->next;
-
-      c->data = b->data;
-
-    } else if (a->data < b->data) { // a < b
-                                    // Coloca o a, depois o b
-      c->data = a->data;
-
-      // Desloca
-      c = c->next;
-
-      c->data = b->data;
-
+    if (A->data <= B->data) {
+        C = A;
+        A = A->next;
+    } else {
+        C = B;
+        B = B->next;
     }
 
-    else if (a->data < b->data) { // a < b
+    T = C; 
 
-      c->data = b->data;
-
-      // Desloca
-      c = c->next;
-
-      c->data = a->data;
+    while (A != NULL && B != NULL) {
+        if (A->data <= B->data) {
+            T->next = A;
+            A = A->next;
+        } else {
+            T->next = B;
+            B = B->next;
+        }
+        T = T->next; 
     }
 
-    a = a->next;
-    b = b->next;
-  }
+    if (A != NULL)
+        T->next = A;
+    else if (B != NULL)
+        T->next = B;
 
-  // Pega o resto ou só retorna
-
-  if (a != NULL) {
-
-    // Adiciona o restante de a em c
-    c->next = a->next;
-
-  } else if (b != NULL) {
-
-    // Adiciona o restante de b em c
-    c->next = b->next;
-  }
-  return c;
+    return C;
 }
+
 
 /**/
 int main() {
