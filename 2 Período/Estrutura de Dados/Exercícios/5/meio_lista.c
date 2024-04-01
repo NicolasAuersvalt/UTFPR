@@ -1,7 +1,18 @@
 #include "list.h"
 
 int meio (List *l) {
-  /*Terminar*/	
+  List *fast = l, *slow = l, *t=l;
+
+  while (t!=NULL){
+
+	  fast = fast->next;
+
+	  if((fast->next->next)==NULL || (fast->next->next)==NULL)
+		  return slow->data;
+
+  	  slow = slow->next;
+	  fast=fast->next->next;
+  }
 }
 
 int main () {
