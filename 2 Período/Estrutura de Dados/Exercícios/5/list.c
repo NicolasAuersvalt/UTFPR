@@ -5,7 +5,8 @@ List* create () {
 }
 
 void destroy (List *l) {
-  /*Terminar*/	
+  List *t = l;
+  
 }
 
 int empty (List *l) {

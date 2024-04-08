@@ -64,6 +64,12 @@ void reversed_polish_notation (char *c) {
   destroy(s);
 }
 
+int compute_polish_expression(char *c){
+	
+
+}
+
+
 int main () {
   char *c = "( 9 + ( ( 0 + 1 ) * ( 2 * 3 ) ) )";
   reversed_polish_notation (c);

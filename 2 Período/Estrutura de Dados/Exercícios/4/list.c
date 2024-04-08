@@ -123,3 +123,27 @@ int similar(List *l, List *m){
 
 
 }
+
+List* intersection(List *A, List *B){
+  List *t, *u = B, *C = (*List)malloc(sizeof(List)), *v;
+  v = C;
+
+  while(u!=NULL){
+
+    t = A;
+
+    while(t!=NULL){
+
+      if(t->data == u->data){
+
+	v->data = t->data;
+	v->next = NULL;
+
+      }
+    }
+    u=u->next;
+  }
+ return C
+
+}
+

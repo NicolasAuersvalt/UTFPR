@@ -8,12 +8,12 @@ int meio (List *l) {
     // Fast anda de 2 em 2
 
     // CONDIÇÃO DE PARADA (professor passou)
-    if((fast->next->next) == NULL || (fast->next->next)==NULL)){
+    if((fast->next) == NULL || (fast->next->next)==NULL){
       return slow->data;
     }
 
   	slow = slow->next;
-	  fast=fast->next->next;
+	fast=fast->next->next;
   }
   return slow->data;
 }
