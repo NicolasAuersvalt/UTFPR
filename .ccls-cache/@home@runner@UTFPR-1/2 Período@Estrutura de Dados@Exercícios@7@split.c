@@ -5,8 +5,9 @@ List* split (List *l, List *x, List *y) {
 
   List *ls = x;
   x->prev->next = y->next;
+  y->next->prev = x->prev;
+
   x->prev = NULL;
-  y->next->prev = NULL;
   y->next = NULL;
   return ls;
 

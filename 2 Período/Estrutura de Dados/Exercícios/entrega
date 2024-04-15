@@ -1,4 +1,68 @@
-Conferir segm fault na list.c OK
+/*
+  Insert Back
+*/
 
-Conferir Circular - segm fault
 
+ist* insert_back (List *l, int elem) {
+  /*Terminar*/	
+
+  List *node = (List*)malloc(sizeof(List));
+
+  // Organiza
+  node->data = elem;
+  node->next = NULL;
+
+  if(l==NULL){
+
+    node->prev = NULL; 
+    return node;
+  }
+
+  else{
+
+    List *t = l;
+
+    while(t->next!=NULL){ // Percorre a lista até o fim
+      t = t->next;   
+  }
+
+    node->prev = t; 
+    t->next = node;
+    return l;
+  }
+}
+
+
+/*
+CIRCULAR
+
+*/
+
+List* create_circular (List *head) {
+  if(head!=NULL){
+    List *tail = head;
+    while(tail->next != NULL)
+      tail = tail->next;
+    tail->next = head;
+    head -> prev = tail;
+}
+  return head;
+}
+
+
+/* 
+ SPLIT
+*/
+
+List* split (List *l, List *x, List *y) {
+  /*Terminar!*/	
+
+  List *ls = x;
+  x->prev->next = y->next;
+  y->next->prev = x->prev;
+
+  x->prev = NULL;
+  y->next = NULL;
+  return ls;
+
+}

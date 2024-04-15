@@ -8,6 +8,8 @@ List* create_circular (List *head) {
     tail->next = head;
     head -> prev = tail;
 }
+  return head;
+}
 
 int main () {
   int i;	
