@@ -5,31 +5,24 @@ List* merge (List *A, List *B) {
   if(A == NULL){
     return B;
   }
-  else if (B == NULL){
+  if(B == NULL){
     return A;
   }
-  else if(A->data > B->data){ // A > B -> B fica
+  if(A->data > B->data){ // A > B -> A fica
     
-    B->next = merge(A->next, B);
+    B->next = merge(A, B->next);
 
-    // b->next = merge(A, B->next)
+    return B;
    
   }
-  else if(A->data < B->data){ // A < B -> A fica
-
-    A->next = merge(A, B->next);
-
-    // b->next = merge(A, B->next)
-
-  }
-  else if(A->data == B->data){ // A > B -> B fica
+  else if(A->data < B->data){ // A < B -> B fica
 
     A->next = merge(A->next, B);
 
-    // b->next = merge(A, B->next)
+    return A;
+
 
   }
-  
 }
 
 /* */

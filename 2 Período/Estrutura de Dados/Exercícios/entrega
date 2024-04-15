@@ -1,182 +1,111 @@
-/* Queue */
+/* sum */
 
-#include "queue.h"
-
-Queue* create () {
-  return NULL;
-}
-
-void destroy (Queue *q) {
-  while (q != NULL) {
-    Queue *t = q->next;
-    free(q);
-    q = t;
-  }
-}
-
-int empty (Queue *q) {
-  return(q==NULL);
-
-}
-
-Queue* enqueue (Queue *q, int elem) {
-
-  /*Terminar*/
-  Queue *novo = (Queue *)malloc (sizeof(Queue));
-  novo -> data = elem;
-  novo ->next = NULL;
-  if(q==NULL)
-    return novo;
-  else{
-    Queue *t = q;
-    while(t->next != NULL)
-      t=t->next;
-    t->next = novo;
-    return q;
-  }
-}
-
-Queue* dequeue (Queue *q) {
-  /*Terminar*/
-
-  if(q==NULL){
-    return 0;
-  }
-  Queue *t = q->next;
-  free(q);
-  return t;
-
-}
-
-int get_front (Queue *q) {
-  /*Terminar*/
-
-  if(!empty(q)) // q!=NULL
-    return q->data;
-
-}
-
-void print (Queue *q) {
-  /*Terminar*/
-
-  Queue *t;
-
-
-  for(t=q; t!= NULL; t= t->next){
-    printf("%d", t->data);
-  }
-}
-
-
-
-
-
-
-/* Stack */
-
-#include "stack.h"
-
-Stack* create () {
-  return NULL;
-}
-
-void destroy (Stack *s) {
-  while (s != NULL) {
-    /*Terminar*/
-    Stack *apoio = s->next; // PROVA
-    free(s);
-    s = apoio;
-  }	  
-}
-
-Stack* push (Stack *s, int elem) {
-
-  Stack *novo = (Stack *)malloc(sizeof(Stack));
-  novo->data = elem;
-  novo->next = s;
-  return novo;
-}
-
-Stack* pop (Stack *s) {
-  /*Terminar*/
-  if(s==NULL){
-    return 0;
-  }
-
-  Stack *apoio = s->next;
-  free(s);
-  s = apoio;
-  return s;
-}
-
-int get_peek (Stack *s) {
-
-  if(empty(s))
-    return 0;
-
-  return s->data;
-}
-
-int empty (Stack *s) {
-  return (s == NULL);
-}
-
-void print (Stack *s) {
-  Stack *apoio=s;
-  printf("Stack: ");
-  while(apoio->next != NULL)
-    printf("%d", apoio->data);
-
-  printf("\n");
-}
-
-
-
-
-/* Meio Lista */
 
 #include "list.h"
 
-int meio (List *l) {
-  List *fast = l, *slow = l, *t=l;
+/* */
+int sum (List *l) {
 
-  while (t!=NULL){
-    // Slow anda de 1 em 1
-    // Fast anda de 2 em 2
-    
-    if((fast->next) == NULL || (fast->next->next)==NULL){
-      return slow->data;
-    }
+  if(l==NULL)
+    return 0;
 
-    slow = slow->next;
-  fast=fast->next->next;
-  }
-  return slow->data;
+  else
+    return l->data + sum(l->next);
+
 }
 
-int main () {
-  int i;	
 
-  List *l0 = create();
-  for (i = 0; i < 3; i++)
-    l0 = insert (l0, i);	
-  print (l0); 
-  printf("Elemento no meio da lista: %d\n", meio(l0));
-  destroy (l0);
 
-  List *l1 = create();
-  for (i = 0; i < 10; i++)
-    l1 = insert (l1, i);	
-  print (l1); 
-  printf("Elemento no meio da lista: %d\n", meio(l1));
-  destroy (l1);
+/* size */
 
-  List *l2 = create();
-  for (i = 0; i < 19; i++)
-    l2 = insert (l2, i);	 
-  print (l2); 
-  printf("Elemento no meio da lista: %d\n", meio(l2));
-  destroy (l2);
 
-  return 0;
+#include "list.h"
+
+/* */
+int size (List *l) {
+  if(l==NULL){
+    return 0;
+  }
+  else{
+    return 1 + size(l->next);
+
+  }
+}
+
+
+/* in */
+
+#include "list.h"
+#include <limits.h>
+
+/* */
+int in (List *l, int k) {
+
+  if(l==NULL){
+    return 0; // NÃO ENCONTROU
+  }
+  else{
+    if(l->data == k){ // Encontrou
+      return 1;
+    }
+    else{
+      return in(l->next, k);
+    }
+  }
+}
+
+
+/* position */
+
+/* */
+int position (List *l, int k) {
+
+  if(l!=NULL){
+    if(l->data == k){
+      return 1;
+    }
+
+    int r = (position(l->next, k));
+
+    if(r==-1){
+      return -1;
+    }
+    else{
+      return r+1;
+    }
+  }
+  else{ // Não Encontrou
+    return -1;
+  }
+}
+
+
+
+
+/* merge */
+
+
+/* */
+List* merge (List *A, List *B) {
+  if(A == NULL){
+    return B;
+  }
+  if(B == NULL){
+    return A;
+  }
+  if(A->data > B->data){ // A > B -> A fica
+
+    B->next = merge(A, B->next);
+
+    return B;
+
+  }
+  else if(A->data < B->data){ // A < B -> B fica
+
+    A->next = merge(A->next, B);
+
+    return A;
+
+
+  }
 }
