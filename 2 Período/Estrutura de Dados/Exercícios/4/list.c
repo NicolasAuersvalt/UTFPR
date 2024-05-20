@@ -15,22 +15,19 @@ List* insert (List *l, int elem) {
 
 /* */
 List* insert_back (List *l, int elem) {
-  /* Terminar! */
-  
   List *node = (List *)malloc(sizeof(List));
   node->data = elem;
   node->next = NULL;
-  if(l==NULL){
-    return node;
-  }
-  else{
-    List *t = l;
-    while(t->next !=NULL)
+  if (l == NULL) { return node; }
+  else {
+    List *t = l;	  
+    while (t->next != NULL)
       t = t->next;
     t->next = node;
-    return l;
+    return l;    
   }
 }
+
 
 /* */
 List* search (List *l, int elem) {
@@ -70,80 +67,9 @@ void print (List *l) {
 
 /* */
 void destroy (List *l) {
-  if (l != NULL) {	
+  while (l != NULL) {	
     List *t = l->next; 
     free (l); 
     l = t;    
-  }      
-  }
-
-int size(List *l){
-
-	int size;
-
-	List *t;
-
-	for(t=l;t!=NULL;t=t->next){
-		size++;
-	}
-
-
-	return size;
+  }  
 }
-
-int max(List *l){
-
-	int max;
-	List *t;
-
-	// Verifica se há elementos inciais
-	if(t==NULL){
-		return 0;
-	}
-
-	// Armazena o primeiro para comparação
-	max = t->data;
-
-	// Verifica se há maiores
-	for(t=l;t!=NULL; t=t->next){
-	   if(t->data > max)
-		   max  = t->data;
-	
-	}
-
-
-}
-
-int similar(List *l, List *m){
-
-   for(; l!=NULL; l=l->next){
-      if(l->data!=m->data) return TRUE;
-   }
-   return FALSE;
-
-
-}
-
-List* intersection(List *A, List *B){
-  List *t, *u = B, *C = (*List)malloc(sizeof(List)), *v;
-  v = C;
-
-  while(u!=NULL){
-
-    t = A;
-
-    while(t!=NULL){
-
-      if(t->data == u->data){
-
-	v->data = t->data;
-	v->next = NULL;
-
-      }
-    }
-    u=u->next;
-  }
- return C
-
-}
-
