@@ -1,7 +1,13 @@
 Linux:
+  
   display "imagem.png"
 
   find -name "nome"
+
+  unzip "filename"
+
+  ./nomearquivo
+  
 
 Comandos com vim:
 
@@ -29,9 +35,27 @@ Comandos com vim:
 
     Esc -> V
 
+  Primeira Linha (fora do visual)
+
+    gg  
+
+  Última Linha 
+
+    G
+
+  Identar
+  
+    gg=C
+
 
 // Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
 
 // Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
 
 // Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend
+
+// Dentro de Makefile:
+
+all:
+
+  gcc -o nomefinal nomearquivo.c
