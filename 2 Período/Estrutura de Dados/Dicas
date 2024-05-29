@@ -1,14 +1,72 @@
 Linux:
+
+  // Exibir imagem
   
-  display "imagem.png"
+    display "imagem.png"
+    
+    
 
-  find -name "nome"
+  // Encontrar aquivo fulano
 
-  unzip "filename"
+    find -name "fulano"
+    
+    
 
-  ./nomearquivo
+  // Extrair arquivo zipado
 
-  pwd
+    unzip "filename"
+
+    
+
+  // Executar
+  
+    ./nomearquivo
+    
+    
+  
+  // Mostrar diretório atual
+  
+    pwd 
+    
+    
+
+  // Copia arquivos
+
+    cp "arquivo" /Desejado
+
+    // Para copiar um diretório
+
+    cp -R /Diretório /Desejado
+    
+    
+
+  // Mover
+
+    mv "arquivo" /Desejado
+
+    // Renomear
+
+      mv nome nome_novo
+    
+    
+
+  // Remove *arquivos* e *diretórios*
+
+    rm /Diretório
+
+    // Recursivamente
+
+      rm -r /diretório
+
+    
+
+  // Mostrar aquivos do diretório
+
+    ls
+
+    // Ocultos
+
+    ls -a
   
 
 Comandos com vim:
