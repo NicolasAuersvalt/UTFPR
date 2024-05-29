@@ -1,4 +1,6 @@
-Linux:
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                            Linux  
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
   // Exibir imagem
   
@@ -67,9 +69,17 @@ Linux:
     // Ocultos
 
     ls -a
+
+
+  // Mostra o tamanho dos arquivos (MBs)
+
+    df -m nomearquivo
   
 
-Comandos com vim:
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                      Comandos com vim  
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
 
   Ativa sintaxe colorida
   
@@ -108,14 +118,18 @@ Comandos com vim:
     gg=C
 
 
-// Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
-
-// Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
-
-// Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend
 
 // Dentro de Makefile:
 
 all:
 
   gcc -o nomefinal nomearquivo.c
+
+
+
+
+// Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
+
+// Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
+
+// Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend

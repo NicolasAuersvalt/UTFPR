@@ -1,0 +1,76 @@
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                            Linux  
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+  // Exibir imagem
+
+    display "imagem.png"
+
+
+
+  // Encontrar aquivo fulano
+
+    find -name "fulano"
+
+
+
+  // Extrair arquivo zipado
+
+    unzip "filename"
+
+
+
+  // Executar
+
+    ./nomearquivo
+
+
+
+  // Mostrar diretório atual
+
+    pwd 
+
+
+
+  // Copia arquivos
+
+    cp "arquivo" /Desejado
+
+    // Para copiar um diretório
+
+    cp -R /Diretório /Desejado
+
+
+
+  // Mover
+
+    mv "arquivo" /Desejado
+
+    // Renomear
+
+      mv nome nome_novo
+
+
+
+  // Remove *arquivos* e *diretórios*
+
+    rm /Diretório
+
+    // Recursivamente
+
+      rm -r /diretório
+
+
+
+  // Mostrar aquivos do diretório
+
+    ls
+
+    // Ocultos
+
+    ls -a
+
+
+  // Mostra o tamanho dos arquivos (MBs)
+
+    df -m nomearquivo
