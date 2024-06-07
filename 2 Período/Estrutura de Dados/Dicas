@@ -76,60 +76,8 @@
     df -m nomearquivo
   
 
+  // Junta (de forma de coluna) dois arquivos (CONFIRMAR DPS)
 
-/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
-                      Comandos com vim  
-/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+    paste arq1.c arq2.c > arq3.c
 
-  Ativa sintaxe colorida
   
-    :syntax on 
-
-  Adiciona a numeração
- 
-    :set number
-
-  Copiar
-
-    yy
-
-  Recortar
-
-    dd
-
-  Colar
-
-    p
-
-  Selecionar
-
-    Esc -> V
-
-  Primeira Linha (fora do visual)
-
-    gg  
-
-  Última Linha 
-
-    G
-
-  Identar
-  
-    gg=C
-
-
-
-// Dentro de Makefile:
-
-all:
-
-  gcc -o nomefinal nomearquivo.c
-
-
-
-
-// Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
-
-// Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
-
-// Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend

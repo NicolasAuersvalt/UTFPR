@@ -1,0 +1,64 @@
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                      Comandos com vim  
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+  Ativa sintaxe colorida
+
+    :syntax on 
+
+  Adiciona a numeração
+
+    :set number
+
+  Copiar
+
+    yy
+
+  Recortar
+
+    dd
+
+  Colar
+
+    p
+
+  Selecionar
+
+    Esc -> V
+
+  Primeira Linha (fora do visual)
+
+    gg  
+
+  Última Linha 
+
+    G
+
+  Identar
+
+    gg=C
+
+  Ir para linha específica
+
+    :4
+    :linha
+
+  Dividir em duas telas
+
+    :split -> ctrl w
+
+
+// Dentro de Makefile:
+
+all:
+
+  gcc -o nomefinal nomearquivo.c
+
+
+
+
+// Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
+
+// Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
+
+// Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend

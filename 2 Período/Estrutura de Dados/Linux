@@ -74,3 +74,7 @@
   // Mostra o tamanho dos arquivos (MBs)
 
     df -m nomearquivo
+
+    du -sh nome_dir
+    du -sh nome_arq
+  
