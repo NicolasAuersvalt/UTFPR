@@ -1,0 +1,151 @@
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                     Comandos Básicos 
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+//  Ativa sintaxe colorida
+
+    :syntax on 
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+//  Adiciona a numeração
+
+    :set number
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+//  Copiar linha
+
+    yy
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Recortar linha
+
+    dd
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+//  Colar (copia linha marcada abaixo da linha corrente)
+
+    p
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+ // Selecionar trecho (Entrar no modo visual)
+
+    Esc -> V
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+ // Primeira Linha (fora do visual)
+
+    gg  
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+ // Última Linha (fora do visual)
+
+    G
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+ // Identar (combinação de teclas)
+
+    gg -> = -> G
+
+    // gg - Primeira linha
+
+    // = - Identar
+
+    // G - Última Linha
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+  Ir para linha específica
+
+    :4
+    :linha
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Desfazer mudança
+
+  // Para salvar, basta teclar esc
+
+  :u
+
+  // ou
+
+  esc -> u
+
+  // Ambas as combinações desfazem as alterações até a última vez teclado esc.
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+                     Avançados 
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Dividir em duas telas
+
+    :split -> ctrl w
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Editar outro arquivo
+
+  // !! ATENÇÃO, SALVAR O ARQUIVO ANTES
+
+  :e tab
+
+  // depois selecione o arquivo desejado. 
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Dentro de Makefile:
+
+all:
+
+  gcc -o nomefinal nomearquivo.c
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Criar um arquivo .header com todas as bibliotecas e tipos struct declarados nela
+
+// Importar tal biblioteca para um arquivo que contém todas as funções (backend).c
+
+// Importar esse arquivo .c que possui a importação da .h para um arquivo de frontend
