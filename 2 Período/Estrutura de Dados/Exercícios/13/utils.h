@@ -3,20 +3,37 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
+#include <ctype.h>
 
 #define TRUE 1
 #define FALSE 0
-#define NOT_FOUND -1
 
 /* */
 void swap (int *A, int i, int j);
 
 /* */
+void swap_char (char *A, int i, int j);
+
+/* */
+void swap_string (char **A, int i, int j);
+
+/* */
 void print (int *A, int n, char *message);
 
 /* */
+void print_float (double *A, int n, char *message);
+
+/* */
+void print_char (char *A, int n, char *message);
+
+/* */
+void partition_print (int *A, int left, int right, int rlevel);
+
+/* */
 int check (int *A, int n, int ascending);
+
+/* */
+int check_float (double *A, int n, int ascending);
 
 #endif

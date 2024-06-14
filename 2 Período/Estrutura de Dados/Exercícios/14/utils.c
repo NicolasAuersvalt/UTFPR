@@ -8,13 +8,6 @@ void swap (int *A, int i, int j) {
 }
 
 /* */
-void swap_char (char *A, int i, int j) {
-  char t = A[i];
-  A[i] = A[j];
-  A[j] = t;
-}
-
-/* */
 void print (int *A, int n, char *message) {
   printf("%s\n", message);
   int i;
@@ -26,25 +19,6 @@ void print (int *A, int n, char *message) {
       printf("%d,", A[i]);
   }
   printf("}\n");
-}
-
-/* */
-void print_char (char *A, int n, char *message) {
-  printf("%s\n", message);
-  int i;
-  printf("A: {");
-  for (i = 0; i < n; i++) {
-    if (i == n-1)
-      printf("%c", A[i]);
-    else    
-      printf("%c,", A[i]);
-  }
-  printf("}\n");
-}
-
-/* */
-void partition_print (int *A, int left, int right, int rlevel) {
-  /*Terminar*/	
 }
 
 /* */

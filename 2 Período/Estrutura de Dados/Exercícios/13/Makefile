@@ -1,8 +1,7 @@
 all:
-	gcc -o bad-commit bad-commit.c utils.c 
-	gcc -o missing missing.c utils.c 
-	gcc -o intersection intersection.c quick-sort.c utils.c 
-	gcc -o word_search word_search.c utils.c 
-	gcc -o perfect-square perfect-square.c utils.c 
+	gcc -o counting-sort-int counting-sort-int.c utils.c 
+	gcc -o counting-sort-char counting-sort-char.c utils.c 
+	gcc -o process-interval process-interval.c utils.c 
+	gcc -o radix-sort-int radix-sort-int.c utils.c 
 clean:
-	rm bad-commit missing intersection word_search perfect-square
+	rm counting-sort-int counting-sort-char process-interval radix-sort-int

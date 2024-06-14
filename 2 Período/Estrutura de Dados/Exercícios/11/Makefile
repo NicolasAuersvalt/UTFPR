@@ -1,7 +1,6 @@
 all:
-	gcc -o counting-sort-int counting-sort-int.c utils.c 
-	gcc -o counting-sort-char counting-sort-char.c utils.c 
-	gcc -o process-interval process-interval.c utils.c 
-	gcc -o radix-sort-int radix-sort-int.c utils.c 
+	gcc -o quick-sort quick-sort.c utils.c
+	gcc -o quick-random quick-random.c utils.c
+	gcc -o quick-find quick-find.c utils.c
 clean:
-	rm counting-sort-int counting-sort-char process-interval radix-sort-int
+	rm quick-sort quick-random quick-find

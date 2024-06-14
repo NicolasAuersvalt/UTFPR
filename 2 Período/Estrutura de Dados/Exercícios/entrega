@@ -1,0 +1,95 @@
+// Busca Linear
+
+
+int linear_search(char **words, int n, char *key) {
+  /*Terminar*/
+  int i;
+  for (i = 0; i < n; i++) {
+    if (strcmp(words[i], key) == 0)
+      return i;
+  }
+  return i;
+}
+
+/* */
+int binary_search_iterative(char **words, int n, char *key) {
+  /*Terminar*/
+  // Pega o meio, tendo a esquerda e direita
+  int l = 0, r = n - 1;
+
+  // Enquanto a direita for maior que a esquerda
+  while (r >= l) {
+
+    // Meio
+    int m = (r + l) / 2;
+    if (strcmp(words[m], key) == 0)
+      return m;
+
+    // Se for maior
+    else if (strcmp(words[m], key) > 0) {
+
+      // Esquerda será o ponto médio para limitar o intervalor
+      r = m - 1;
+    }
+
+    // Se for menor
+    else if (strcmp(words[m], key) < 0)
+
+      // Direita será o ponto médio
+      l = m + 1;
+  }
+
+  // Não encontrou
+  return 0;
+}
+
+/* */
+int binary_search_recursive(char **words, int l, int r, char *key) {
+
+  if(r<=l){
+    return 0;
+  }
+
+    // Meio
+    int m = (r + l) / 2;
+    if (strcmp(words[m], key) == 0)
+      return m;
+
+    // Se for maior
+    else if (strcmp(words[m], key) > 0) {
+
+      // Esquerda será o ponto médio para limitar o intervalor
+      return binary_search_recursive(words, l, m-1, key);
+    }
+
+    // Se for menor
+    else if (strcmp(words[m], key) < 0)
+
+      // Direita será o ponto médio
+      return binary_search_recursive(words, m+1, r, key);
+
+}
+
+
+
+// Missing
+
+int missing_number (int *A, int n, int m) {
+  /*Terminar*/	
+
+  // Divide na metade
+  int l = 0;
+  int meio;
+  int r = n-1;
+  while(l<=r){
+    int meio = (l+r)/2;
+  if(A[meio] > meio){
+    r = meio - 1;
+  }
+  else{
+    l = meio + 1;
+  }
+  }
+
+   return l;
+} 
