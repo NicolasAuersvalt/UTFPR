@@ -118,6 +118,18 @@
 
     :split -> ctrl w
 
+// Transitar entre telas
+
+    ctrl + w -> up / down (setinhas do teclado)
+
+// Trabalhando em dois arquivos diferentes ao mesmo tempo
+
+    :split -> :e nome_arquivo -> ctrl + w -> up / down
+
+// Lembre-se de salvar os arquivos antes de fechá-los
+
+// :e + Tab é uma opção melhor
+
 
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
 
