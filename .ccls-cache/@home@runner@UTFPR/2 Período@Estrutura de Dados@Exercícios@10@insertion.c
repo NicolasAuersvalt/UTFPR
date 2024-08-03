@@ -7,6 +7,7 @@ void insertion_sort(int *A, int n) {
 
   // Percorre todo o vetor
   for (i = 1; i < n; i++) {
+    
     // Cada posição será a chave
     int key = A[i];
     int flag = 1;

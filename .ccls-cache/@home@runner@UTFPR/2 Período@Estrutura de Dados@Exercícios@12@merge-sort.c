@@ -11,9 +11,13 @@ void merge(int A[], int l, int m, int r, int O[]) { // particion
   // Faz as trocas
   while ((i <= m) && (j <= r)) {
     if (A[i] <= A[j]) {
+      
       O[k++] = A[i++];
+      
     } else {
+
       O[k++] = A[j++];
+      
     }
   }
 

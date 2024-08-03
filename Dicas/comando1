@@ -1,0 +1,579 @@
+// Insert Mode (Esc + a ou Esc + i)
+
+  Permite Escrita no Arquivo
+
+// Normal Mode(Esc)
+  
+  Salvar (Write)
+    :w
+
+  Salvar e Sair (Write and Quite)
+    :wq
+
+  Ação Forçada (!)
+    :q!
+
+  Desfazer (Undo)
+    :u
+
+  Ligar Sintaxe
+    :syntax on
+
+  Ligar Numeração de Linha
+    :set number
+
+  Ir para Linha Específica (ex: 4)
+    :4
+
+
+
+
+
+  Mudar de Arquivo
+    :e + Tab
+
+  Dividir Tela
+    :split -> CTRL w -> UP / DOWN
+
+
+
+
+  Modo Visual (Visual Mode)
+
+  Entrar
+    Esc + V
+
+
+  Copiar - Recortar - Colar
+    y    -    d     -   p
+
+  Início - Fim
+    gg   -  G
+
+  Identar (Iníco ao Fim)
+    gg=G
+
+
+  Linux
+
+  Encontrar arquivo em um diretório
+
+    find -name "nome_arquivo"
+
+  Extrair arquivo zipado
+
+    unzip filename.zip
+
+  Mostrar o tamanho dos arquivos
+
+    du -sh nome_diretorio_ou_arquivo
+
+  Exibir imagem (ImageMagick)
+
+    display "imagem.png"
+
+  Agilidade (Dica do Nícolas)
+
+    mkdir teste && cd teste
+
+
+
+
+
+
+
+
+
+
+========================================================
+Compilação
+
+
+  No shell, tendo o código .c ou .cpp pronto, digite
+
+    gcc -o executavel nome_arquivo.extensao
+
+  gcc: Chama o compilador GNU para C
+
+  -o teste: Especifica o nome do arquivo executável de saída como "teste".
+
+  teste.c: Indica o arquivo fonte em C a ser compilado.
+
+  Atenção com a ordem, o executável não pode ser digitado depois do nome do arquivo,
+  pois a compilação é feita de trás para frente.
+
+  
+
+  Para executá-lo, digite o comando
+
+    ./executavel
+
+  Digite ls para ver o arquivo executável e o arquivo base
+
+========================================================
+
+========================================================
+Makefile
+
+Básico
+
+  No shell, crie um arquivo primeiro.c que exiba "Primeiro" e salve
+
+  Em seguida, crie o arquivo Makefile
+
+    vim Makefile
+
+  Tendo o arquivo chamado primeiro.c no mesmo diretório do Makefile, digite o seguinte
+
+    all: 
+
+      gcc -o primeiro primeiro.c
+
+  Cuidado com a identação, apenas na linha do gcc. Salve o arquivo (:wq)
+  e verifique (cat Makefile)
+
+  Execute o Makefile (Estando dentro do diretório com o arquivo)
+    make
+
+
+
+Específico
+
+  Escreva dois arquivos, primeiro.c e segundo.c, que exibem "Primeiro" para primeiro.c 
+  e "Segundo" para segundo.c
+  
+  Crie um Makefile e digite o seguinte
+
+    all: primeiro segundo
+  
+    primeiro:
+      gcc -o primeiro primeiro.c
+  
+    segundo:
+      gcc -o segundo segundo.c
+
+
+  all: primeiro segundo
+
+  Alvo all: É o alvo padrão. Quando você executa make sem especificar um alvo,
+  o make tenta construir o primeiro alvo no Makefile, que geralmente é all.
+
+  Dependências teste e teste2: Significa que para construir all, o make deve
+  primeiro construir os alvos teste e teste2.
+
+
+  Atenção, Certifique-se de que o Makefile esteja no mesmo diretório que os
+  arquivos teste.c e teste2.c.
+  
+  Verifique se você está usando tabulações em vez de espaços para indentação.
+  
+  Verifique a existência dos arquivos teste.c e teste2.c no diretório atual.
+
+
+Salve o Makefile e execute 
+
+  make primeiro
+  ./primeiro
+  ./segundo
+  make segundo
+
+É possível compilar cada um separadamente.
+
+
+
+
+
+Limpando Antigos Executáveis
+
+  Acrescente ao código do mesmo makefile o clean
+
+  all: primeiro segundo
+
+  primeiro:
+    gcc -o primeiro primeiro.c
+
+  segundo:
+    gcc -o segundo segundo.c
+
+  clean:
+    rm -f primeiro segundo
+
+
+  Alvo clean: Este alvo é usado para limpar os arquivos
+  gerados pelo processo de compilação.
+
+  'rm -f primeiro segundo': Remove os arquivos *executáveis*
+  primeiro e segundo. A opção -f (force) força a remoção sem pedir
+  confirmação e ignora erros se os arquivos não existirem.
+
+
+  Salve o Makefile e execute
+
+    make
+
+  Agora para remover os executáveis e manter o diretório limpo, digite
+
+    make clean
+    
+
+========================================================
+
+
+
+Entre no INSERT MODE teclando ‘i’. 
+Para voltar ao NORMAL MODE, tecle ‘ESC’
+
+Digite algo no arquivo
+
+
+CUIDADO! mesmo que você digite algo, o arquivo não está salvando automáticamente.
+Portanto, caso ocorra algo que acabe causando instabilidade no Shell, seu arquivo poderá
+ser comprometido ou “salvo” em um arquivo de extensão .swap.
+
+
+Para salvar, volte ao Normal Mode e digite ‘:w’. Caso precise salvar e sair, digite ‘:wq’.
+Após salvar, digite ‘:q’ para sair do arquivo (verifique sempre se ele foi salvo antes
+ou utilize a combinação :wq).
+Se for necessário salvar ou fechar forçadamente, acrescente ! ao final, como ‘:q!’
+
+É possível conferir se o arquivo foi realmente escrito digitando ‘cat nome_do_arquivo’, que
+neste caso, ‘cat teste.c’
+
+
+
+Entre novamente no arquivo digitando seu nome
+  vim teste.c
+
+Dentro do arquivo, escreva um código básico entrando no INSERT MODE (tecle 'i' ou 'a')
+
+  #include<stdio.h>
+
+  int main(){
+
+    printf("Hello World!\n");
+  
+    return 0;
+  }
+
+  
+
+Salve e feche o arquivo (:wq), depois verifique se foi salvo digitando 'cat teste.c'
+
+Para compilar, digite no shell o seguinte
+
+  gcc -o teste teste.c
+
+Ou
+
+  gcc teste.c -o teste
+
+
+Após a compilação, execute o arquivo digitando
+
+  ./teste
+
+
+
+
+
+  
+
+
+
+// Essencial
+
+
+Para copiar ou recortar um texto e colar, há algumas formas
+
+1° Selecionar o texto com mouse (segure shift no Replit)
+
+  Com o mouse, selecione e aperte o botão direito do mouse para copiar
+
+  imagem
+
+  Cole normalmente em qualquer lugar ou fora do shell. Se estiver
+  usando o shell do Replit, segure shift para selecionar e 
+  ctrl + c para colar
+  
+
+2º Modo Normal
+
+  Entre no Modo Normal (ESC)
+
+  Vá até a linha desejada, e no início dela
+
+  Digite 'y' (yank) para copiar
+
+  imagem
+
+  Com isso, vá até a linha desejada
+
+  Digite 'p' (paste) para colar
+
+  imagem
+  
+
+  
+3º Modo de Seleção Visual (selecionando)
+
+  Selecione o texto desejado, caso precise sair, tecle ESC
+
+  Digite y para copiar
+
+  imagem
+
+  Estando no Modo Normal (Esc), vá até a linha desejada
+  
+  Digite p para colar
+
+  imagem
+
+  Para recortar, é similar, entre no modo de
+  Seleção Visual (ESC + v) e selecione o texto
+
+  Digite d para recortar
+
+  imagem
+
+  Estando no Modo Normal, vá até a linha desejada
+
+  Digite p para colar
+
+
+
+Normal
+
+Para cada comando a seguir, não esqueça de inclur os ':' para 
+poder acessar a barra inferior, a qual receberá os comandos com :
+
+Para iniciar um código, é interessante se localizar. Para
+isso, pode-se ativar a numeração de linha por
+
+  :set number
+
+imagem
+
+Além disso, é possível ativar a sintaxe colorida
+
+  :syntax on
+
+imagem
+
+Caso o código tenha muitas linhas, é possível ir para uma linha
+específica, a qual tenha tido algum erro na compilação. Supondo que
+a linha 5 esteja problemática
+
+  :5
+
+imagem
+
+É possível ir para o início e para o fim do código fácilmente. 
+No Modo Normal (ESC) digite
+
+  Para ir para o começo
+    gg 
+
+  Para ir para o fim
+    G
+
+Se o código não estiver identado, é possível identá-lo do INÍCIO (gg)
+ao FIM (G) entrando no Modo Normal (ESC) e digitando
+
+  gg=G
+
+imagem
+
+
+Toda vez que entrar no Modo Normal (Digitando ESC), o código será 
+parcialmente salvo, podendo ser desfeito alterações.
+Supondo que haja alguma alteração a ser desfeita até o salvamento
+
+  :u
+
+  imagem
+
+Ou estando no Modo Normal, apenas digite u 
+(sem precisar do :, isto é, ESC -> u)
+
+
+Se for necessário alterar o arquivo ao qual está sendo trabalhado, pode-se
+apenas transicionar da seguinte maneira
+
+1° Salve o arquivo (:w)
+
+2° Digite :e
+
+3° Tecle TAB
+
+4° Selecione o arquivo desejado
+
+5° Tecle ENTER
+
+imagem
+
+Logo, é possível trabalhar em dois arquivos ao mesmo tempo.
+Para isso, é necessário dividir a tela
+
+  :split
+
+imagem
+
+Para transicionar entre as telas, digite (Não funciona no Replit)
+
+  CTRL + w
+
+E depois a seta UP ou DOWN, dependendo da posição em que está
+
+imagem
+
+Ao entrar na tela desejada, digite
+
+  :e + TAB
+
+Acesse o arquivo desejado
+
+imagem
+
+Atenção, lembre-se de salvar os arquivos 
+transicionando entre telas (ctrl + w + UP/DOWN)
+
+
+
+
+
+// LINUX
+
+Encontrar arquivo em um diretório
+
+  find -name "nome_arquivo"
+
+Extrair arquivo zipado
+
+  unzip filename.zip
+
+Mostrar o tamanho dos arquivos
+
+  du -sh nome_diretorio_ou_arquivo
+
+// Exibir imagem (Precisa de ImageMagick instalado)
+
+  ImageMagick é um conjunto de ferramentas de código
+  aberto para manipulação e processamento de imagens.
+  Ele pode lidar com formatos de imagem JPEG, PNG, GIF, TIFF
+
+  // Instalação
+
+    sudo apt-get update
+    sudo apt-get install imagemagick
+
+  // Utilização (.extensão_do_arquivo)
+  
+    display "imagem.png"
+
+
+  
+
+  // Agilidade (Dica do Nícolas)
+
+  Em vez de criar a pasta e depois acessá-la
+
+    mkdir teste
+    cd teste
+
+  Basta utilizar '&&', ele é usado para concatenar comandos,
+  ou seja, executar um comando após o outro, *mas somente
+  se o primeiro comando for bem-sucedido*.
+
+    mkdir teste && cd teste
+
+
+
+
+
+
+  // Arquivo Swap
+
+
+  O arquivo .swp (de "swap") é um arquivo temporário
+  criado pelo Vim para guardar uma cópia do seu trabalho,
+  caso você feche o editor de forma inesperada, como por exemplo,
+  um desligamento repentino do computador ou um crash do Vim ou replit.
+
+  Criado automaticamente: O Vim cria o arquivo .swp
+  quando você inicia a edição de um arquivo.
+  
+  Conteúdo: Ele contém uma versão temporária do arquivo 
+  que você está editando, incluindo as mudanças que você fez.
+  
+  Objetivo: A ideia é que, caso você perca seu trabalho 
+  por algum motivo, o Vim possa recuperar as alterações a partir do .swp.
+
+  Quando você fecha o Vim, ele precisa salvar as alterações no arquivo.
+  Se algo interrompe esse processo, ele pode não conseguir salvar
+  completamente as alterações. O é criado como um "checkpoint" para tentar
+  recuperar o máximo possível do seu trabalho
+
+  foto 1
+
+
+  foto 2 Fechamento forçado
+
+
+  Para verificar o arquivo swp, digite 
+
+    ls -a
+
+  A flag '-a' fará com que sejam mostrados os arquivos ocultos
+
+  foto 3
+
+  Ao tentar editar o arquivo novamente, será exibido uma mensagem
+
+  foto 4
+
+  [R]ecover: Essa é a opção ideal na maioria dos casos.
+  Ela tenta recuperar o conteúdo do arquivo .swp,
+  restaurando as alterações que você fez antes
+  do fechamento inesperado do Vim.
+  
+  [E]dit Anyway: Abre o arquivo normalmente, ignorando o .swp.
+  Se você não tiver feito nenhuma alteração importante desde
+  a última vez que salvou, essa opção pode ser segura.
+  
+  [O]pen read-only: Abre o arquivo em modo somente leitura,
+  impedindo que você faça alterações até que o problema com o 
+  .swp seja resolvido. Essa opção é útil se você não tiver
+  certeza do que aconteceu e quiser evitar perder dados.
+  
+  [D]elete it: Exclui o arquivo 
+  .swp. Se você tiver certeza de que não precisa das informações
+  que ele contém, essa opção pode ser usada.
+  
+  [Q]uit: Sai do Vim sem abrir o arquivo e sem fazer nenhuma ação.
+  
+  [A]bort: Cancela a operação atual e volta para o modo normal do Vim.
+
+  Então basta digitar a inicial da ação desejada, neste caso, R:
+
+  Foto 5
+  
+
+  Na maioria dos casos, a melhor opção é "Recover" para recuperar
+  as alterações que você fez. Se você tiver certeza de que não
+  precisa das informações do .swp, você pode escolher "Delete it".
+
+  *Lembre-se de deletar o arquivo .swp depois de recuperar, utilizando
+  o comando rm ou em [D]elete*
+
+
+
+  Foto 6
+
+
+ Este material não tem o intuito de substituir nenhuma aula, apenas servir de apoio para a adaptação à tecnologia VIM.
+
+ Os comandos de Linux foram extraídos das aulas, portanto não será iniciado com os básicos (ls, cd, pwd), pois espera-se que esse conhecimento já seja conhecido para a leitura do material.
+
+ É recomendado praticar os comandos do VIM nos exercícios passados em aula, e no Beecrowd.
+
+ Deve-se utilizar uma máquina Linux, WSL (no Prompt do Windows) ou o shell do Replit.

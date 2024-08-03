@@ -2,6 +2,7 @@ compile = ["make", "-s"]
 run = "./main"
 entrypoint = "main.c"
 hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
+modules = ["python-3.10"]
 
 [nix]
 channel = "stable-22_11"

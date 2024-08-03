@@ -13,9 +13,17 @@
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
 
 
-// Encontrar arquivo fulano
+// Limpar a tela
 
-    find -name "fulano"
+    clear
+
+
+/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
+
+
+// Encontrar arquivo em um diretório
+
+    find -name "nome_arquivo"
 
 
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
@@ -23,7 +31,7 @@
 
 // Extrair arquivo zipado
 
-    unzip "filename"
+    unzip filename.zip
 
 
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
@@ -93,9 +101,7 @@
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
 
 
-// Mostra o tamanho dos arquivos (MBs)
-
-    df -m nomearquivo
+// Mostrar o tamanho dos arquivos
 
     du -sh nome_dir
     du -sh nome_arq

@@ -13,7 +13,7 @@
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
 
 
-//  Adiciona a numeração
+//  Adiciona a numeração    
 
     :set number
 
@@ -38,7 +38,7 @@
 
 //  Colar (copia linha marcada abaixo da linha corrente)
 
-    p
+    p 
 
 /==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==/==
 
@@ -118,13 +118,13 @@
 
     :split -> ctrl w
 
-// Transitar entre telas
+// Transitar entre telas 
 
     ctrl + w -> up / down (setinhas do teclado)
 
 // Trabalhando em dois arquivos diferentes ao mesmo tempo
 
-    :split -> :e nome_arquivo -> ctrl + w -> up / down
+    :split -> :e nome_arquivo
 
 // Lembre-se de salvar os arquivos antes de fechá-los
 

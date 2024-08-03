@@ -1,5 +1,9 @@
 { pkgs }: {
 	deps = [
+   pkgs.mailutils
+   pkgs.imagemagick
+   pkgs.unzip
+   pkgs.mtools
    pkgs.haskellPackages.snap-templates
    pkgs.vim
    pkgs.vimPlugins.vim-helm

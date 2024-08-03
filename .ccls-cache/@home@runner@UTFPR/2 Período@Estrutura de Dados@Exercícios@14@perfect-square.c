@@ -2,7 +2,23 @@
 
 /* */
 int perfect_square (int n) {
-  /*Terminar*/	
+
+  int low = 1, high = n;
+  int* result = (int*)malloc(sizeof(int) * (n + 1)); // Allocate memory for the result list 
+  int result_size = 0; // Keep track of the number of perfect squares found
+
+  while (low <= high) {
+    int mid = (low + high) / 2;
+    if (mid * mid == n) {
+      result[result_size++] = mid; 
+      // Handle the case where we might have multiple perfect squares
+      low = mid + 1; // Continue searching for more perfect squares 
+    } else if (mid * mid > n) {
+      high = mid - 1; 
+    } else {
+      low = mid + 1;
+    }
+  }
 } 
 
 /* */
