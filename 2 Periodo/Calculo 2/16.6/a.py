@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 # Definir a parametrização da superfície
 def r(u, v):
     x = u + 2 * v
-    y = u + 2 
+    y = u + 2 * v
     # Teste com 2*v
     z = u + v
     return x, y, z
