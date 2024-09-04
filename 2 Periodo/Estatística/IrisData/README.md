@@ -2,6 +2,8 @@
 
 O Iris dataset, ou conjunto de dados Iris, é um dos conjuntos de dados mais conhecidos e amplamente utilizados no campo de aprendizado de máquina e estatística. Ele foi introduzido pelo biólogo e estatístico britânico Ronald A. Fisher em seu artigo intitulado “The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis” em 1936. O dataset é frequentemente usado para testes e demonstrações de técnicas de análise de dados.
 
+<img src="">
+
 ## Descrição do Dataset
 
 Este conjunto de dados contém informações sobre 150 flores de íris, divididas em três espécies diferentes: Iris setosa, Iris versicolor e Iris virginica. Cada flor tem quatro características medidas em centímetros:
