@@ -1,5 +1,6 @@
 { pkgs }: {
 	deps = [
+   pkgs.streamlit
    pkgs.mailutils
    pkgs.imagemagick
    pkgs.unzip
