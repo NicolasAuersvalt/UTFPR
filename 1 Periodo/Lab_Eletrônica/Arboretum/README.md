@@ -22,7 +22,7 @@ Inspiração do projeto, feito no TinkerCad:
 
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/2eb441e0e0f74838bcb88f7f56b793e0add985bb/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
 
-### MATERIAIS
+## MATERIAIS
 
 Neste projeto foram utilizados os seguintes materiais:
 
@@ -35,7 +35,7 @@ Neste projeto foram utilizados os seguintes materiais:
 Esta foi uma inspiração e serviu como base para o desenvolvimento.
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/2eb441e0e0f74838bcb88f7f56b793e0add985bb/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/Projeto.PNG" alt="Arboretum">
 
-### BLYNK
+## BLYNK
 
 No aplicativo “Blynk”, é essencial criar um “template” com pinos virtuais, estes empregando o V0 para a movimentação no eixo X e o V1 para a movimentação no eixo Y.
 
@@ -45,7 +45,7 @@ Ao mover o joystick para cima, receberemos valores crescentes até 255 pelo par�
 
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/2eb441e0e0f74838bcb88f7f56b793e0add985bb/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/Diagrama.PNG">
 
-### ESP8266
+## ESP8266
 
 O ESP8266 é um módulo de comunicação sem fio que integra um microcontrolador com suporte Wi-Fi. Frequentemente é utilizado em projetos de IoT (“Internet of Things”) permitindo a comunicação e troca de dados sem fio entre dispositivos.
 
