@@ -1,0 +1,17 @@
+data(iris)
+
+hist(iris$Petal.Width, freq = FALSE, main = "Ajuste Normal")
+curve(dnorm(x, mean = mean(iris$Petal.Width), sd = sd(iris$Petal.Width)),
+col = "red", add = TRUE)
+
+hist(iris$Petal.Length, freq = FALSE, main = "Ajuste Normal")
+curve(dnorm(x, mean = mean(iris$Petal.Length), sd = sd(iris$Petal.Length)),
+col = "red", add = TRUE)
+
+hist(iris$Sepal.Width, freq = FALSE, main = "Ajuste Normal")
+curve(dnorm(x, mean = mean(iris$Sepal.Width), sd = sd(iris$Sepal.Width)),
+col = "red", add = TRUE)
+
+hist(iris$Sepal.Length, freq = FALSE, main = "Ajuste Normal")
+curve(dnorm(x, mean = mean(iris$Sepal.Length), sd = sd(iris$Sepal.Length)),
+col = "red", add = TRUE)

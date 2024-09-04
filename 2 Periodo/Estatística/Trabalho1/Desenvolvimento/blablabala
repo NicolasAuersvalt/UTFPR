@@ -1,0 +1,33 @@
+# Carregar o dataset Iris
+iris = load_iris()
+data = iris.data
+target = iris.target
+
+# Número de clusters
+n_clusters = len(set(target))
+
+# Configurar a validação cruzada
+kf = KFold(n_splits=10, shuffle=True, random_state=123)
+
+# Armazenar as pontuações
+scores = []
+
+# Executar a validação cruzada
+for train_index, test_index in kf.split(data):
+    X_train, X_test = data[train_index], data[test_index]
+    y_train, y_test = target[train_index], target[test_index]
+
+    # Ajustar o modelo K-means
+    kmeans = KMeans(n_clusters=n_clusters, random_state=123)
+    kmeans.fit(X_train)
+
+    # Prever os rótulos
+    y_pred = kmeans.predict(X_test)
+
+    # Avaliar o desempenho usando o Silhouette Score
+    score = silhouette_score(X_test, y_pred)
+    scores.append(score)
+
+# Média das pontuações
+mean_score = np.mean(scores)
+print(f"Silhouette Score médio da validação cruzada: {mean_score:.9f}")
