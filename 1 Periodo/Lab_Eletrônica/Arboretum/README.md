@@ -13,10 +13,10 @@ O projeto consiste em um carrinho equipado com dois motores amarelos DC 3/6v, um
 
 Exemplo de funcionamento:
 
-[Tank antigo, tudo foi desenvolvido nele;](https://youtu.be/343yUzrjcDY) -
-[Com Problemas;](https://youtu.be/MywrVtYvrxg) -
-[Funcionando;](https://www.youtube.com/watch?v=djULl-QYb-8) -
-[Ligando.](https://youtube.com/shorts/QOh1b2ECXVc)<br>
+[Tank antigo, tudo foi desenvolvido nele](https://youtu.be/343yUzrjcDY) -
+[Com Problemas](https://youtu.be/MywrVtYvrxg) -
+[Funcionando](https://www.youtube.com/watch?v=djULl-QYb-8) -
+[Ligando](https://youtube.com/shorts/QOh1b2ECXVc)<br>
 
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/2eb441e0e0f74838bcb88f7f56b793e0add985bb/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
 
