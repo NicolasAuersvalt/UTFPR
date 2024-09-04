@@ -18,6 +18,8 @@ Exemplo de funcionamento:
 [Funcionando](https://www.youtube.com/watch?v=djULl-QYb-8) -
 [Ligando](https://youtube.com/shorts/QOh1b2ECXVc)<br>
 
+Inspiração do projeto, feito no TinkerCad:
+
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/2eb441e0e0f74838bcb88f7f56b793e0add985bb/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/Arboretum.PNG" alt="Arboretum">
 
 ### MATERIAIS
