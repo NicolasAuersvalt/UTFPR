@@ -1,4 +1,4 @@
-## ~ ARBORETUM ~
+## ~ ARBORETUM (樹木園) ~
 <img src="https://github.com/NicolasAuersvalt/UTFPR/blob/main/1%20Periodo/Lab_Eletr%C3%B4nica/Arboretum/Images/ArboretumFrontal.jpg">
 
 Como projeto final da disciplina de Introdução às práticas de laboratório em eletricidade e eletrônica (ELEX10) foi realizado uma miniatura de um "_Arboretum_" ou arboreto, um local onde árvores, arbustos e plantas herbáceas são cultivadas para fins científicos e educacionais.
