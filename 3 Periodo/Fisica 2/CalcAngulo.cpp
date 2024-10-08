@@ -36,7 +36,7 @@ int main(){
 		cout << "f(x) = cos(x)" << endl;
 		
 		for(int i=0; i<vet.size(); i++){
-			cout << "f(" << vet[i] << ") = " <<  2 + cos(vet[i]) << "   " << endl;
+			cout << "f(" << valores[i] << ") = " << + cos(vet[i]) << "   " << endl;
 		}	
 
 		cout << endl << endl;
