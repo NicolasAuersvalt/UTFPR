@@ -1,0 +1,2 @@
+all:
+	g++ -o pessoa main.cpp pessoa.cpp
