@@ -2,43 +2,21 @@
 #include<string.h>
 using namespace std;
 
-Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, char* nome)
+Principal::Principal()
 {
-	// Método Construtor
-	diaP = diaNa;
-	mesP = mesNa;
-	anoP = anoNa;
-	strcpy(nomeP, nome);
-	idadeP = 0;
+	// Passo para o Construtor
+	Nicolas.Inicializa(1, 2, 3, "Nicolas Auersvalt");
+	Albert.Inicializa(1, 2, 3, "Nicolas Auersvalt");
+	Newton.Inicializa(1, 2, 3, "Nicolas Auersvalt");
+
+	// Executa operações desejadas
+	Executar();
 
 }
-
-void Pessoa::Calc_Idade(int diaAT, int mesAT, int anoAT)
+void Principal::Executar()
 {
-	idadeP = anoAT - anoP;
-	if(mesP < mesAT)
-	{
-		idadeP = idadeP - 1;	
-	}
-	else
-	{
-		if(mesP == mesAT)
-		{
-			if(diaP<diaAT)
-			{
-				idadeP = idadeP-1;		
-			}		
-		}
-	}
-}
+	Nicolas.Calc_Idade(2,4,2009);
+	Albert.Calc_Idade(2,14,2001);
+	Newton.Calc_Idade(3,5,2002);
 
-void Pessoa::ExibeNome()
-{
-	cout << "A idade da Pessoa " << nomeP << " seria " << idadeP << endl;
-
-}
-
-int Pessoa::informaldade()
-{
-	return idadeP;
 }
