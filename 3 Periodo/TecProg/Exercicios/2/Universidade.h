@@ -1,6 +1,5 @@
-#ifndef _UNIVERSIDADE_H
-#include _UNIVERSIDADE_H
-#include<iostream>
+#pragma once
+#include <iostream>
 
 class Universidade
 {
@@ -17,4 +16,3 @@ class Universidade
 
 };
 
-#endif
