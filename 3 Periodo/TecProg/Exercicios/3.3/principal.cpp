@@ -3,7 +3,7 @@
 
 Principal::Principal(){
 
-	cout << "ok" << endl;
+	cout << "Hello World!" << endl;
 }
 
 Principal::~Principal(){
