@@ -2,27 +2,27 @@
 
 
 Arvore* cria_arv_vazia (void) {
-   return NULL;
+	return NULL;
 }
 
 Arvore* constroi_arv (char c, Arvore *e, Arvore *d) {
-   Arvore *no = (Arvore*)malloc(sizeof(Arvore));
-   no->info = c;
-   no->esq = e;
-   no->dir = d;
-   return no;
+	Arvore *no = (Arvore*)malloc(sizeof(Arvore));
+	no->info = c;
+	no->esq = e;
+	no->dir = d;
+	return no;
 }
 
 int verifica_arv_vazia (Arvore *a) {
-   return (a == NULL);
+	return (a == NULL);
 }
 
 void arv_libera (Arvore* a) {
-   if (!verifica_arv_vazia(a)) {
-      arv_libera (a->esq);
-      arv_libera (a->dir);
-      free(a);
-   }
+	if (!verifica_arv_vazia(a)) {
+		arv_libera (a->esq);
+		arv_libera (a->dir);
+		free(a);
+	}
 }
 
 //========= Exercício 2 - pré-ordem ====
@@ -56,7 +56,7 @@ int pertence(Arvore *a, char c){
 int conta_nos(Arvore *a){
 	// printf("%c", a->info);
 	int ramo = 1;
-	if(a->info == NULL){
+	if(a == NULL){
 		return 1;
 	}
 	if(a->esq != NULL){
@@ -74,7 +74,7 @@ int conta_nos(Arvore *a){
 int altura(Arvore *a){
 	printf("%c", a->info);
 	int altura_esq = 1, altura_dir=1;
-	if(a->info == NULL){
+	if(a== NULL){
 		return 1;
 	}
 	else if(a->esq !=NULL)
@@ -93,10 +93,10 @@ int altura(Arvore *a){
 
 int conta_nos_folha(Arvore *a){
 	printf("%c", a->info);
-	if(a->info == NULL){
+	if(a == NULL){
 		return 0;
 	}
-	
+
 	if(a->esq == NULL && a->dir == NULL){
 		return 1;
 	}
@@ -109,25 +109,35 @@ int conta_nos_folha(Arvore *a){
 
 }
 
-int main (int argc, char *argv[]) {
-
-   Arvore *a = constroi_arv ('a',
-       constroi_arv('b',
-       cria_arv_vazia(),
-       constroi_arv('d', cria_arv_vazia(),cria_arv_vazia())
-     ),
-     constroi_arv('c',
-       constroi_arv('e',cria_arv_vazia(),cria_arv_vazia()),
-       constroi_arv('f',cria_arv_vazia(),cria_arv_vazia())
-     )
-   );	
-
-   printf("%d", conta_nos_folha(a));
-
-
-   arv_libera (a);
-
-   return 0;
+void imprime_arv_marcadores(Arvore* a){
+	printf("<");
+	if(a != NULL){
+		printf("%c", a->info);
+		if(a != NULL){
+			imprime_arv_marcadores(a->esq);
+			imprime_arv_marcadores(a->dir);
+		}	}
+	printf(">");
 }
 
- 
+int main (int argc, char *argv[]) {
+
+	Arvore *a = constroi_arv ('a',
+			constroi_arv('b',
+				cria_arv_vazia(),
+				constroi_arv('d', cria_arv_vazia(),cria_arv_vazia())
+				),
+			constroi_arv('c',
+				constroi_arv('e',cria_arv_vazia(),cria_arv_vazia()),
+				constroi_arv('f',cria_arv_vazia(),cria_arv_vazia())
+				)
+			);	
+
+
+	imprime_arv_marcadores(a);
+	arv_libera (a);
+
+	return 0;
+}
+
+
