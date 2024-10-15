@@ -108,6 +108,7 @@ int conta_nos_folha(Arvore *a){
 	return node;
 
 }
+// Extra
 
 void imprime_arv_marcadores(Arvore* a){
 	printf("<");
@@ -118,6 +119,58 @@ void imprime_arv_marcadores(Arvore* a){
 			imprime_arv_marcadores(a->dir);
 		}	}
 	printf(">");
+}
+
+// Conta nós de cada ramo
+
+void nos(Arvore *a){
+	if(a!=NULL){
+		int nosTotal=0;
+		if(a->esq!=NULL){nosTotal++;}
+		if(a->dir!=NULL){nosTotal++;}
+		printf("%c possui %d nós \n", a->info, nosTotal);
+		nos(a->esq);
+		nos(a->dir);
+		// Folha
+		if(a->dir == NULL && a->esq == NULL){
+			printf("%c é uma folha\n", a->info);
+		}
+
+		if(a->dir == NULL && a->esq != NULL){
+			// Duplica para preencher
+			a->dir = constroi_arv (a->info, NULL, NULL);
+			printf("%c foi duplicado\n", a->info);
+		}
+
+		if(a->esq == NULL && a->dir != NULL){
+			// Duplica para preencher
+			a->esq = constroi_arv (a->info, NULL, NULL);
+			printf("%c foi duplicado\n", a->info);
+
+		}
+	}
+
+
+}
+
+
+void espelha_arvores(Arvore* a){
+
+	if(a!=NULL){
+		// 1 etapa
+		
+		
+		if(a->esq && a->dir !=  NULL){
+			char apoio = a->esq->info;
+			a->esq->info = a->dir->info;
+			a->dir->info = apoio;
+		}
+		espelha_arvores(a->esq);
+		espelha_arvores(a->dir);
+	}	
+	
+
+
 }
 
 int main (int argc, char *argv[]) {
@@ -132,9 +185,10 @@ int main (int argc, char *argv[]) {
 				constroi_arv('f',cria_arv_vazia(),cria_arv_vazia())
 				)
 			);	
+	espelha_arvores(a);
 
-
-	imprime_arv_marcadores(a);
+	//imprime_arv_marcadores(a);
+	// nos(a);
 	arv_libera (a);
 
 	return 0;
