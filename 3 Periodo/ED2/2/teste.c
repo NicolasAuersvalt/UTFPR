@@ -1,5 +1,5 @@
 #include "abbLista.h"
-
+const int Maximo = 10^7;
 
 Arvore* cria_arvore_vazia (void) {
 	return NULL;
