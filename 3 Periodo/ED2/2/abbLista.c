@@ -97,21 +97,47 @@ int buscar (Arvore *a, int v) {
 int min(Arvore *a){
 
 	printf("Nó %d\n", a->info);
-	int esq=INF, dir=INF;
+	int esq = a->info, dir = a->info;
 
 	if(a->esq != NULL) esq = min(a->esq);
 	if(a->dir != NULL) dir = min(a->dir);
 
-	printf("%d\n", esq);
-	printf("%d\n", dir);
 	return esq > dir ? dir : esq;
 }
 //========= Q2 - max =====
+int max(Arvore *a){
+
+	printf("Nó %d\n", a->info);
+	int esq = a->info, dir = a->info;
+
+	if(a->esq != NULL) esq = max(a->esq);
+	if(a->dir != NULL) dir = max(a->dir);
+
+	return esq < dir ? dir : esq;
+}
 
 //========= Q3 - imprime_decrescente =====
 
+void imprime_decrescente(Arvore *a){
+	if(a != NULL){
+		imprime_decrescente(a->dir);
+		imprime_decrescente(a->esq);
+		printf("%d", a->info);
+	}
+}
+
 
 //========= Q4 - maior ramo =====
+
+int maior_ramo(Arvore *a){
+	if(a == NULL){
+		return 0;
+	}
+	int
+	maior_ramo(a->esq)+a->info > maior_ramo(a->dir) 
+	return max(maior_ramo(a->esq)+a->info, maior_ramo(a->dir);
+}
+
 
 
 void pre_order (Arvore* a) {
@@ -146,7 +172,11 @@ int main () {
 	pre_order (a);	
 	printf("\n");
 
-	printf("%d",min(a));
+	// printf("Minimo é %d",min(a));
+
+	// printf("Max é %d",max(a));
+	
+	imprime_decrescente(a);
 
 	// ====== Q5 ====
 

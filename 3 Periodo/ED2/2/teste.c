@@ -97,10 +97,10 @@ int buscar (Arvore *a, int v) {
 int min(Arvore *a){
 
 	// Arvore vazia
-	if(a->info == NULL){
+	if(a == NULL){
 		return 0;
 	}
-	else if(a->esq->info == NULL){
+	else if(a->esq == NULL){
 		return a->esq->info;
 	}
 	else{
@@ -116,7 +116,7 @@ int max(Arvore *a){
 	if(a->info == NULL){
 		return 0;
 	}
-	else if(a->esq->info == NULL){
+	else if(a->esq == NULL){
 		return a->dir->info;
 	}
 	else{
@@ -127,7 +127,7 @@ int max(Arvore *a){
 //========= Q3 - imprime_decrescente =====
 
 void imprime_descrescente(Arvore *a){
-	if(a->info == NULL){
+	if(a == NULL){
 		return 0;
 	}
 	imprime_decrescente(a->dir);
@@ -139,7 +139,7 @@ void imprime_descrescente(Arvore *a){
 //========= Q4 - maior ramo =====
 
 int maior_ramo(Arvore *a){
-	if(a->info == NULL){
+	if(a == NULL){
 		return 0;
 	}
 	return max(maior_ramo(a->esq)+a->info, maior_ramo(a->dir);
