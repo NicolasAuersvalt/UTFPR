@@ -180,24 +180,54 @@ int ancestral(Arvore *a, int e1, int e2){
 
 Arvore* constroi_balanceado(int vet[], int esq, int dir){
 
-	int left = esq;
-	int right = dir;
-	Arvore arvore;
-	if(esq == dir || dir < esq){
+	// Escolhe o meio
+	int meio = (esq + dir)/2;
+
+	// Variaveis limites
+	int left, right;
+
+	// Cria a árvore
+	Arvore a;
+	cria_arvore_vazia();
+	
+	// Divide os elementos esq / dir
+	
+	left = 0;
+	right = meio;
+
+	// Bota o elemento central na raiz da arvore
+	inserir(a, meio);
+
+	divididor(a, vet, left, right);
+
+	left = meio;
+	right = dir;
+
+	divididor(a,vet, left, right);
+	return a;
+
+}
+
+int divididor(Arvore *a, vet[], int left, int right){
+	// Esquerda primeiro
+
+		// Se houver apenas 2 elementos em tal intervalo
+	if((left+right) == 2){
+		inserir(a, vet[left]);
+		inserir(a, vet[right]);
 		return 0;
 	}
 
-	while(){
-		int pM = (right+ left)/2;
-		while(){
-			
-		}
-		while(){
+	// Pega a meiuca desse intervalo
+	int subMeio = (left + right)/2;
 
+	// Coloca como nova raiz interna
+	inserir(a,subMeio);
 
-		}
-
-	}
+	// obs, ele já vai colocar na esquerda da raiz
+	divididor(a, vet, left, subMeio);
+	divididor(a, vet, subMeio, right);
+	return 0;
 }
 
 
