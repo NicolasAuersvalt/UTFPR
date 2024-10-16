@@ -1,0 +1,48 @@
+#include "horario.h"
+#include <iostream>
+using namespace std;
+Horario::Horario(){
+	cout << "Teste" << endl;
+	getHora();
+	getMin();
+	setHora(5);
+	setMin(5);
+	//calcularIntervalo();
+}
+
+Horario::~Horario(){
+
+}
+
+int Horario::getHora(){
+
+	cout << "getHora" << endl;
+
+	return 1;
+}
+
+int Horario::getMin(){
+
+	cout << "getMin" << endl;
+
+	return 1;
+}
+
+void Horario::setHora(int hr){
+
+	cout << "setHora" << endl;
+
+}
+
+void Horario::setMin(int mn){
+
+	cout << "setMin" << endl;
+
+}
+
+int Horario::calcularIntervalo(Horario h){
+
+	cout << "Calcular Intevalo" << endl;
+
+	return 1;
+}
