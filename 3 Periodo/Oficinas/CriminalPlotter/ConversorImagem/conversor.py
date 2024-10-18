@@ -14,7 +14,7 @@ def image_to_matrix(image_path):
     return binary_matrix
 
 # Exemplo de uso
-image_path = 'nave.png'  # Substitua pelo caminho da sua imagem
+image_path = 'Integral.png'  # Substitua pelo caminho da sua imagem
 binary_matrix = image_to_matrix(image_path)
 print(binary_matrix)  # Imprime a matriz de 0 e 1
 
