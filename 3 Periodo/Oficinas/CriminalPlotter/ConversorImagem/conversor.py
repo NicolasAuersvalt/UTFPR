@@ -9,11 +9,19 @@ def image_to_matrix(image_path):
     # Converte a imagem para uma matriz numpy
     img_np = np.array(img)
     # Aplica o limiar: 0 para branco (acima do limiar) e 1 para preto (abaixo do limiar)
-    binary_matrix = np.where(img_np < threshold, 1, 0)
+    binary_matrix = np.where(img_np < threshold, 0, 1)
     
     return binary_matrix
 
 # Exemplo de uso
-image_path = 'teste.jpg'  # Substitua pelo caminho da sua imagem
+image_path = 'nave.png'  # Substitua pelo caminho da sua imagem
 binary_matrix = image_to_matrix(image_path)
 print(binary_matrix)  # Imprime a matriz de 0 e 1
+
+def save_matrix_to_file(matrix, filename):
+    np.save(filename, matrix)  # Salva a matriz no arquivo
+
+# Exemplo de uso
+matrix = np.array([[0, 1, 0], [1, 0, 1], [0, 1, 0]])  # Substitua pela matriz gerada
+filename = 'in.npy'
+save_matrix_to_file(matrix, filename)
