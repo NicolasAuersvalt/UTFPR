@@ -2,7 +2,8 @@ from PIL import Image
 import numpy as np
 
 def load_matrix_from_file(filename):
-    return np.load(filename)  # Carrega a matriz salva
+    # Carrega a matriz salva no arquivo .npy
+    return np.load(filename)
 
 def matrix_to_image(binary_matrix, output_path):
     # Converte a matriz de 0 e 1 em uma imagem de escala de cinza (0 para branco, 255 para preto)
@@ -11,8 +12,8 @@ def matrix_to_image(binary_matrix, output_path):
     img.save(output_path)
 
 # Exemplo de uso
-filename = 'in.npy'  # Nome do arquivo com a matriz salva
+filename = 'in.npy'  # Nome do arquivo onde a matriz foi salva
 binary_matrix = load_matrix_from_file(filename)
-output_path = 'Naveconvertida.png'
+output_path = 'imagem_convertida.png'  # Nome do arquivo da imagem de saída
 matrix_to_image(binary_matrix, output_path)
 print(f'Imagem salva em: {output_path}')
