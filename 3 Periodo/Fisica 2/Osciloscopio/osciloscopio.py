@@ -11,7 +11,6 @@ baud_rate = 9600 # Deve ser o mesmo que no código do Arduino
 arduino = serial.Serial(arduino_port, baud_rate)
 time.sleep(2)  # Aguarda a inicialização da comunicação
 
-# Configuração do gráfico
 plt.ion()  # Ativa o modo interativo para plotar em tempo real
 fig, ax = plt.subplots()
 window_size = 100  # Número de pontos a serem exibidos no gráfico
