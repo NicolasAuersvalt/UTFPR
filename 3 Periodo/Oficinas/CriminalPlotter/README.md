@@ -1,6 +1,6 @@
 # CriminalPlotter
 
-![Criminal Plotter Diagram](images/plotter_diagram.png)
+![Criminal Plotter Diagram](images/logo.png)
 
 
 **Data**: Outubro de 2024  
