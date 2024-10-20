@@ -57,7 +57,9 @@ O funcionamento do projeto baseia-se na movimentação em eixos, utilizando trê
 
 A parte física do plotter foi modelada no Tinkercad e impressa com filamento PLA branco (500g). Para a construção do banco de características, será utilizado um código em Python para converter uma imagem em preto e branco em uma matriz, onde os elementos podem ser representados por 1 byte para cada pixel (0 para preto e 1/255 para branco). Após a conversão, as características da imagem serão utilizadas para a construção de cada perfil.
 
-Inicialmente, o sistema aguardará a entrada de dois dígitos: o primeiro para selecionar a característica desejada (nariz, rosto) e o segundo para escolher o formato do modelo. Em seguida, o plotter realizará uma busca linha por linha na matriz, identificando os valores do desenho (0 ou 1/255) para marcar a margem, previamente definida pela resolução da imagem, e se moverá até a posição correta para iniciar o desenho, rotacionando e abaixando a caneta até encostar no papel com a pressão adequada.
+nicialmente, o sistema iniciará uma rotina em que será necessário digitar quais características o usuário deseja. Começando pelo cabelo, o usuário deverá inserir a opção correspondente ao tipo de cabelo desejado ou digitar 0 para nenhum. O mesmo processo será repetido para selecionar as características do rosto, olhos, nariz e boca.
+
+Em seguida, o plotter realizará uma busca linha por linha na matriz, identificando os valores do desenho (0 ou 1/255) para marcar a margem, previamente definida pela resolução da imagem, e se moverá até a posição correta para iniciar o desenho. O plotter rotacionará e abaixará a caneta até que ela encoste no papel com a pressão adequada.
 
 As movimentações são controladas por funções dedicadas. Após a combinação de características selecionadas, a matriz correspondente será salva para futuras exportações.
 
