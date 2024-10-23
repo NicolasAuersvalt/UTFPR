@@ -2,7 +2,10 @@
 #define VINCULO_H
 
 
-class Vinculo
+class empregado{
+
+
+}
 
 
 #endif
