@@ -12,7 +12,7 @@ class Socio : public Colaborador{
 		
 
 	public:
-		Socio();
+		Socio(const string& n, int tempo, float valorHora, int horas);
 		~Socio();
 
 };
