@@ -1,16 +1,13 @@
+#include<iostream>
+#include<cstring>
 #include"colaborador.h"
-
-#include <iostream>
-
-#include<string>
 
 using namespace std;
 
-Colaborador::Colaborador(char n, int tempo){
+Colaborador::Colaborador(const char *n, int tempo){
 
-	strcpy(n, nome);
+	strcpy(nome, this->n);
 	tempoServico = tempo;
-
 
 }
 
