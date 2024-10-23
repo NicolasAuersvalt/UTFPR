@@ -6,6 +6,8 @@
 class Empregado : public Colaborador{
 
 	private:
+		float valHora;
+		int horaTrabalha;
 
 	public:
 		Empregado();

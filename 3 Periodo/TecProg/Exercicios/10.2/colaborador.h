@@ -5,12 +5,11 @@ class Colaborador{
 
 	protected:
 		char nome[100];
-		int tempoServico; // Em anos
-		
+		int tempoServico; // Em anos	
 
 	public:
 
-		Colaborador();
+		Colaborador(const char *n, int tempo);
 		~Colaborador();
 
 };

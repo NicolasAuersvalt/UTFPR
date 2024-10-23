@@ -7,6 +7,8 @@
 class Socio : public Colaborador{
 
 	private:
+		float valHora;
+		int horasTrabalha;
 		
 
 	public:
