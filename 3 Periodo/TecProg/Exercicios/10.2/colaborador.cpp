@@ -4,11 +4,9 @@
 
 using namespace std;
 
-Colaborador::Colaborador(const char *n, int tempo){
-
-	strcpy(nome, this->n);
-	tempoServico = tempo;
-
+Colaborador::Colaborador(string& n, int tempo):
+	nome(n), tempoServico(tempo)
+{
 }
 
 

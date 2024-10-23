@@ -1,15 +1,18 @@
 #ifndef COLABORADOR_H
 #define COLABORADOR_H
 
+#include <string>
+using namespace std;
+
 class Colaborador{
 
 	protected:
-		char nome[100];
+		string nome;
 		int tempoServico; // Em anos	
 
 	public:
 
-		Colaborador(const char *n, int tempo);
+		Colaborador(string& n, int tempo);
 		~Colaborador();
 
 };
