@@ -3,12 +3,16 @@
 int main () {
 
    Arvore *AVL = NULL;
-
-   for(int i=0; i<=40; i++){
-	AVL = inserir(AVL, i);
-   }
+  
 
    /*TERMINAR (INSERIR DEMAIS CHAVES)!!!*/
+
+   AVL = inserir(AVL, "Nicolas");
+   AVL = inserir(AVL, "Ciclano");
+   AVL = inserir(AVL, "Bruno");
+   AVL = inserir(AVL, "Pedro");
+   AVL = inserir(AVL, "Leandro");
+   AVL = inserir(AVL, "Renato");
 
    //AVL = remover (AVL, 'A');
    //AVL = remover (AVL, 'H');

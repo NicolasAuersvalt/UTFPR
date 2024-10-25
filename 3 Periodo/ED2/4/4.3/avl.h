@@ -3,12 +3,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct node {
-   int chave;
+ 
+   char* chave;
    int altura;
    struct node* esq;
    struct node* dir;
+
 } No, Arvore;
 
 int maior (int esq, int dir);
@@ -31,9 +34,9 @@ Arvore* atualizar_fb_dir (Arvore *a);
 
 Arvore* atualizar_fb_esq (Arvore *a);
 
-Arvore* inserir (Arvore *a, int chave);
+Arvore* inserir (Arvore *a, char* chave);
 
-Arvore* remover (Arvore *a, int chave);
+Arvore* remover (Arvore *a, char* chave);
 
 void imprimir_in_order (Arvore* a, int nivel);
 

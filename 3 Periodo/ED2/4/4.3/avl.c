@@ -91,15 +91,17 @@ Arvore* atualizar_fb_esq (Arvore *a) { //ok
 }
 
 /*----------------------*/
-Arvore* inserir (Arvore *a, int chave) {
+Arvore* inserir (Arvore *a, char* chave) {
    /*TERMINAR!!!*/
 	if(a==NULL){
 		a = (No*) malloc(sizeof(No));
+		a->chave = (char*) malloc(sizeof(chave));
 		a->chave = chave;
+//		strcpy(chave, a->chave);
 		a->altura = 0;
 		a->esq = a->dir = NULL;
 	}
-	else if (chave < a->chave){
+	else if (strcmp(chave, a->chave)){
 			a->esq = inserir(a->esq,chave);
 			a = atualizar_fb_esq(a);
 	}
@@ -112,7 +114,7 @@ Arvore* inserir (Arvore *a, int chave) {
 }
 
 /*Função para remover um nó de uma árvore binária de busca balanceada!*/
-Arvore* remover (Arvore *a, int chave) {
+Arvore* remover (Arvore *a, char* chave) {
    if (a == NULL) {
       return NULL;
    }
@@ -127,17 +129,20 @@ Arvore* remover (Arvore *a, int chave) {
       }
       else {
          if ((a->esq == NULL) && (a->dir == NULL)) {
+	    free(a->chave);
             free (a);
             a = NULL;
          }
          else if (a->esq == NULL) {
             No *tmp = a;
-            a = a->dir;
+            a = a->dir;	    
+	    free(a->chave);
             free (tmp);
          }
          else if (a->dir == NULL) {
             No *tmp = a;
             a = a->esq;
+	    free(a->chave);
             free (tmp);
          }
          else {
@@ -145,8 +150,8 @@ Arvore* remover (Arvore *a, int chave) {
             while (tmp->dir != NULL) {
                tmp = tmp->dir;
             }
-            a->chave = tmp->chave; 
-            tmp->chave = chave;
+	    strcpy(tmp->chave,a->chave);
+            strcpy(chave, tmp->chave);
             a->esq = remover (a->esq, chave); 
             a = atualizar_fb_dir (a);
          }
@@ -162,7 +167,7 @@ void imprimir_in_order (Arvore* a, int nivel) {
       for (i = 0; i < nivel; i++) {
          printf("      ");
       }
-      printf("Chave: %d (altura: %d, fb: %+d) no nível: %d\n", a->chave, a->altura, balanceamento(a), nivel);
+      printf("Chave: %s (altura: %d, fb: %+d) no nível: %d\n", a->chave, a->altura, balanceamento(a), nivel);
       imprimir_in_order (a->esq, nivel + 1);
       imprimir_in_order (a->dir, nivel + 1);
    }
