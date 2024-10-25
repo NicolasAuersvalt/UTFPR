@@ -24,7 +24,7 @@ int balanceamento (Arvore *a) {
 }
 
 /*----------------------*/
-Arvore* rotacao_simples_esq (Arvore* a) {
+Arvore* rotacao_simples_esq (Arvore* a) {// ok
    /*TERMINAR!!!!*/
 	No *t = a->dir;
 	a->dir = t->esq;
@@ -35,7 +35,7 @@ Arvore* rotacao_simples_esq (Arvore* a) {
 }
 
 /*----------------------*/
-Arvore* rotacao_simples_dir (Arvore* a) {
+Arvore* rotacao_simples_dir (Arvore* a) { // ok
    /*TERMINAR!!!!*/
 	No *t = a->esq;
 	a->esq = t->dir;
@@ -46,7 +46,7 @@ Arvore* rotacao_simples_dir (Arvore* a) {
 }
 
 /*----------------------*/
-Arvore* rotacao_dupla_esq (Arvore* a) {
+Arvore* rotacao_dupla_esq (Arvore* a) { // ok
    /*TERMINAR!!!!*/
 	a->dir = rotacao_simples_dir(a->dir);
 	return rotacao_simples_esq(a);
@@ -60,7 +60,7 @@ Arvore* rotacao_dupla_dir (Arvore* a) {
 }
 
 /*----------------------*/
-Arvore* atualizar_fb_dir (Arvore *a) {
+Arvore* atualizar_fb_dir (Arvore *a) { // ok
    /*TERMINAR!!!*/
 	
 	a->altura = atualizar_altura(a);
@@ -76,7 +76,7 @@ Arvore* atualizar_fb_dir (Arvore *a) {
 }
 
 /*----------------------*/
-Arvore* atualizar_fb_esq (Arvore *a) {
+Arvore* atualizar_fb_esq (Arvore *a) { //ok
    /*TERMINAR!!!*/
 	a->altura = atualizar_altura(a);
 	if(balanceamento(a) == -2){
@@ -105,7 +105,7 @@ Arvore* inserir (Arvore *a, char chave) {
 	}
 	else{
 			a->dir = inserir(a->dir, chave);
-			atualizar_fb_dir(a);
+			a = atualizar_fb_dir(a);
 	}
 	
 	return a;
