@@ -8,50 +8,107 @@ int maior (int esq, int dir) {
 /*----------------------*/
 int altura (Arvore* a) {
    /*TERMINAR!!!!*/	
+	return (a==NULL ? -1 : a->altura);
 }
 
 int atualizar_altura (Arvore *a) {
    /*TERMINAR!!!!*/	
+	return(maior(altura(a->esq), altura(a->dir))+1);
+
 }
 
 /*----------------------*/
 int balanceamento (Arvore *a) {
    /*TERMINAR!!!!*/
+	return (altura(a->dir) - altura(a->esq));
 }
 
 /*----------------------*/
 Arvore* rotacao_simples_esq (Arvore* a) {
    /*TERMINAR!!!!*/
+	No *t = a->dir;
+	a->dir = t->esq;
+	t->esq = a;
+	a->altura = atualizar_altura(a);
+	t->altura = atualizar_altura(t);
+	return t;
 }
 
 /*----------------------*/
 Arvore* rotacao_simples_dir (Arvore* a) {
    /*TERMINAR!!!!*/
+	No *t = a->esq;
+	a->esq = t->dir;
+	t->dir = a;
+	a->altura = atualizar_altura(a);
+	t->altura = atualizar_altura(t);
+	return t;
 }
 
 /*----------------------*/
 Arvore* rotacao_dupla_esq (Arvore* a) {
    /*TERMINAR!!!!*/
+	a->dir = rotacao_simples_dir(a->dir);
+	return rotacao_simples_esq(a);
 }
 
 /*----------------------*/
 Arvore* rotacao_dupla_dir (Arvore* a) {
    /*TERMINAR!!!!*/
+	a->esq = rotacao_simples_esq(a->esq);
+	return rotacao_simples_dir(a);
 }
 
 /*----------------------*/
 Arvore* atualizar_fb_dir (Arvore *a) {
    /*TERMINAR!!!*/
+	
+	a->altura = atualizar_altura(a);
+	if(balanceamento(a) == +2){
+		if(balanceamento(a->dir)>=0){
+		a = rotacao_simples_esq(a);
+		}
+	else{
+		a = rotacao_dupla_esq(a);
+		}
+	}
+	return a;
 }
 
 /*----------------------*/
 Arvore* atualizar_fb_esq (Arvore *a) {
    /*TERMINAR!!!*/
+	a->altura = atualizar_altura(a);
+	if(balanceamento(a) == -2){
+		if(balanceamento(a->esq)<=0){
+		a = rotacao_simples_dir(a);
+		}
+	else{
+		a = rotacao_dupla_dir(a);
+		}
+	}
+	return a;
 }
 
 /*----------------------*/
 Arvore* inserir (Arvore *a, char chave) {
    /*TERMINAR!!!*/
+	if(a==NULL){
+		a = (No*) malloc(sizeof(No));
+		a->chave = chave;
+		a->altura = 0;
+		a->esq = a->dir = NULL;
+	}
+	else if (chave < a->chave){
+			a->esq = inserir(a->esq,chave);
+			a = atualizar_fb_esq(a);
+	}
+	else{
+			a->dir = inserir(a->dir, chave);
+			atualizar_fb_dir(a);
+	}
+	
+	return a;
 }
 
 /*Função para remover um nó de uma árvore binária de busca balanceada!*/

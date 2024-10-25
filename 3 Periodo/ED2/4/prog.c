@@ -5,6 +5,10 @@ int main () {
    Arvore *AVL = NULL;
 
    AVL = inserir (AVL, 'Q');
+   AVL = inserir (AVL, 'A');
+   AVL = inserir (AVL, 'B');
+   AVL = inserir (AVL, 'C');
+
    /*TERMINAR (INSERIR DEMAIS CHAVES)!!!*/
 
    //AVL = remover (AVL, 'A');
