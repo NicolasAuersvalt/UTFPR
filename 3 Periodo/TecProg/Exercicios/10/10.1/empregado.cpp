@@ -3,10 +3,9 @@
 
 Empregado::Empregado(){
 
-
 }
 
 Empregado::~Empregado(){
 
-
 }
+

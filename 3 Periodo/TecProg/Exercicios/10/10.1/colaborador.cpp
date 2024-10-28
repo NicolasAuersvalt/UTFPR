@@ -1,15 +1,26 @@
-#include"colaborador.h"
+// colaborador.cpp
+#include "colaborador.h"
 
-#include <iostream>
+Colaborador::Colaborador() : nome(""), tempoServico(0) {}
 
-using namespace std;
+Colaborador::Colaborador(const std::string& nome, int tempoServico)
+    : nome(nome), tempoServico(tempoServico) {}
 
-Colaborador::Colaborador(){
+Colaborador::~Colaborador() {}
 
+void Colaborador::setNome(const std::string& nome) {
+    this->nome = nome;
 }
 
-
-Colaborador::~Colaborador(){
-
-
+std::string Colaborador::getNome() const {
+    return nome;
 }
+
+void Colaborador::setTempoServico(int tempo) {
+    tempoServico = tempo;
+}
+
+int Colaborador::getTempoServico() const {
+    return tempoServico;
+}
+

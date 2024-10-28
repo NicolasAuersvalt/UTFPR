@@ -1,20 +1,26 @@
+// colaborador.h
 #ifndef COLABORADOR_H
 #define COLABORADOR_H
 
-class Colaborador{
+#include <string>
 
-	protected:
-		char nome[100];
-		int tempoServico; // Em anos
-		
+class Colaborador {
 
-	public:
+    protected:
+        std::string nome;
+        int tempoServico; // Em anos
 
-		Colaborador();
-		~Colaborador();
+    public:
+        Colaborador();
+        Colaborador(const std::string& nome, int tempoServico);
+        virtual ~Colaborador();
 
+        void setNome(const std::string& nome);
+        std::string getNome() const;
+
+        void setTempoServico(int tempo);
+        int getTempoServico() const;
 };
 
-
-
 #endif
+

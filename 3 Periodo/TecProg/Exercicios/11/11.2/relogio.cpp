@@ -16,3 +16,13 @@ Relogio::~Relogio(){
 
 
 }
+
+void Relogio::setHora(int ano, int mes, int dia, int hora, int min, int seg){
+	ano = this->ano;
+	mes = this->mes;
+	dia = this->dia;
+	hora = this->hora;
+	min = this->min;
+	seg = this->seg;
+
+}

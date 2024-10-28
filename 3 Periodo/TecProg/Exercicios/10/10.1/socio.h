@@ -1,21 +1,28 @@
+// socio.h
 #ifndef SOCIO_H
 #define SOCIO_H
 
 #include "colaborador.h"
 
-// Classe Socio herda Colaborador
-class Socio : public Colaborador{
+class Socio : public Colaborador {
 
-	private:
-		float valHora;
-		int horasTrabalha;
-		
+    private:
+        float valHora;
+        int horasTrabalhadas;
 
-	public:
-		Socio();
-		~Socio();
+    public:
+        Socio();
+        ~Socio();
 
+        void setNome(const std::string& nome);
+        std::string getNome() const;
+
+        void setValores(float val, int horas);
+        void setHorasTrabalhadas(int horas);
+        int getHorasTrabalhadas() const;
+
+        float calculaPagamento() const;
 };
 
-
 #endif
+

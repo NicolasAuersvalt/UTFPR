@@ -3,7 +3,7 @@
 
 class Relogio{
 
-	private:
+	protected:
 		int ano;
 		int mes;
 		int dia;
@@ -15,6 +15,7 @@ class Relogio{
 		Relogio();
 		Relogio(int ano, int mes, int dia, int hora, int min, int seg);
 		~Relogio();
+		void setHora(int ano, int mes, int dia, int hora, int min, int seg);
 };
 
 

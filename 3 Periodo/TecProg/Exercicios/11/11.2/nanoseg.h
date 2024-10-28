@@ -2,15 +2,16 @@
 #define NANOSEG_H
 #include "relogio.h"
 
-class Nano : public Relogio{
+class Nano : protected Relogio{
 
 	private:
 		int nano;
 
 	public:
-		Nano();
+		Nano(int ano, int mes, int dia, int hora, int min, int seg);
 		~Nano();
 		void setNano(int nano);
+		void getHora();
 };	
 
 

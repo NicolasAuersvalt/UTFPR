@@ -2,11 +2,11 @@
 #define PRINCIPAL_H
 
 #include "colaborador.h"
+#include "socio.h"
 
 class Principal{
 
 	private:
-		Colaborador Nicolas;
 
 	public:
 		Principal();
