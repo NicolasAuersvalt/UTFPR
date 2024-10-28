@@ -1,5 +1,6 @@
 #ifndef NANOSEG_H
 #define NANOSEG_H
+#include "relogio.h"
 
 class Nano : public Relogio{
 
@@ -7,9 +8,10 @@ class Nano : public Relogio{
 		int nano;
 
 	public:
-		Principal();
-		~Principal();
-};
+		Nano();
+		~Nano();
+		void setNano(int nano);
+};	
 
 
 #endif
