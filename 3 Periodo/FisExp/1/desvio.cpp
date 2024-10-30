@@ -5,19 +5,20 @@
 using namespace std;
 
 int main(){
-
-	vector<float> vet(5,0);
-	for(int i=0; i<5; i++){
+	int a;
+	cin >>a;
+	vector<float> vet(a,0);
+	for(int i=0; i<a; i++){
 		cin >> vet[i];
 	}
 	float media;
-	for(int i=0; i<5; i++){
+	for(int i=0; i<a; i++){
 		media+=vet[i];
 	}
-	media /=5.0;
+	media /= (float) a;
 	float desvio =0;
-	for(int i=0; i<5; i++){
-		desvio += (vet[i] - media) * (vet[i] - media) / 5;
+	for(int i=0; i<a; i++){
+		desvio += (vet[i] - media) * (vet[i] - media) / a;
 //		cout << desvio << endl;
 	}
 	cout << sqrt(desvio);
