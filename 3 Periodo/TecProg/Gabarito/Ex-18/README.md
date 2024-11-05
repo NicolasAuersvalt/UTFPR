@@ -1,0 +1,4 @@
+### 18 - Fazer um programa para:
+* Criar uma classe *Departamento* que permita relacionar um objeto (Departamento) à classe *Universidade* por composição (Universidade “contém” Departamento)
+* Adaptar a classe *Pessoa* para que ela possua uma referência ao departamento que trabalha, ou seja, ela deve possuir uma associação com a classe *Departamento*, permitindo que cada objeto Pessoa tenha a referência de um objeto *Departamento*.
+* A partir da classe *Pessoa* deve ser possível imprimir o seu nome, a sua idade (caso estivesse viva), o *Departamento* em que trabalhou e a *Universidade* à qual este departamento pertence. Dica: navegar entre Departamento e a *Universidade* que o contém por meio do link da composição.

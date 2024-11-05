@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1553794946 source:e:\private\tecprog_2019_1\ex3caixacpp\src\caixa.cpp
+	"..\include\Caixa.h"
+
+1553794537 e:\private\tecprog_2019_1\ex3caixacpp\include\caixa.h
+
+1553795736 source:e:\private\tecprog_2019_1\ex3caixacpp\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	"include\Caixa.h"
+

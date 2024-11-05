@@ -1,0 +1,86 @@
+#include "Universidade.h"
+#include "stdafx.h"
+
+Universidade::Universidade(){}
+
+Universidade::~Universidade(){}
+
+Universidade::getNome(){
+	return nome;
+}
+#ifndef UNIVERSIDADE_H
+#define UNIVERSIDADE_H
+
+class Universidade{
+
+	private:
+		string nome;
+
+	public:
+
+		Universidade();
+		~Universidade();
+		void setNome(string nome);
+		string *getNome();
+
+};
+
+
+
+#endif
+#ifndef PESSOA_H
+#define PESSOA_H
+
+class Pessoa{
+
+	private:
+		string nome;
+		int idade;
+		Universidade *Univ;
+
+	public:
+		Pessoa();
+		~Pessoa();
+		void setNome(string nomePessoa);
+		string *getNome();
+		void setIdade(int idade);
+		int getIdade();
+		void setUniversidade(Universidade Uni);
+		string *getUniversidade();
+
+};
+
+#endif
+#include "Pessoa.h"
+
+#include "stdafx.h"
+
+Pessoa::setNome(string nomeP){
+	nome = nomeP;
+}
+
+Pessoa::getNome(){
+	return nome;
+}
+
+Pessoa::setIdade(int idadeP){
+	idade = P
+}
+
+Pessoa::getIdade(){
+	if (idade>0){
+		return idade;
+	}
+	else
+	{
+		cout << "Idade Incorreta" << endl;
+	}
+}
+
+Pessoa::setUniversidade(Universidade Uni){
+	this->Uni = Uni
+}
+
+Pessoa::getUniversidade(){
+	return Uni.getNome();
+}

@@ -1,0 +1,1 @@
+### 39 - Alterar a classe *Pessoa* para incluir um atributo estático que permita informar quantos objetos de *Pessoa* (ou derivadas desta) existem no sistema.

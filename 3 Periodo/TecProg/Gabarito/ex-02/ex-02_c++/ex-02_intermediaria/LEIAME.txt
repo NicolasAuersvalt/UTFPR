@@ -1,0 +1,6 @@
+
+Soluções em C++
+
+Há um projeto feito com Microsoft Visual Studio (este com alguns comentários,  ajustes e mesmo alguma correção do professor) e o outro via Makefile (este o original dos monitores). 
+
+Att.

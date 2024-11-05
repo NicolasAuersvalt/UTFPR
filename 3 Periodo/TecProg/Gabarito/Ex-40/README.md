@@ -1,0 +1,1 @@
+### 40 - Alterar o exercício sobre polígonos regulares, triângulos e quadrados para que a classe *PolReg* não apresente uma definição para o método de cálculo de área; ou seja, a classe *PolReg* deve ser transformada em uma classe abstrata

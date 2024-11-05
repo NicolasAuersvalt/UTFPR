@@ -1,0 +1,16 @@
+FORMAS DE EXECUTAR:
+
+Existem duas versões do projeto, uma implementada usando o Visual Studio 2022, e outra, 
+usando apenas o editor de texto vim.
+
+Para a versão do Visual Studio, uso o arquivo .sln para abrir o projeto. Já, para
+a outra versão no terminal digite make para executar o arquivo makefile.
+
+CONCEITOS UTILIZADOS:
+
+* Classe
+* Parâmetros privados
+* Métodos públicos
+* Construtor vazio
+* Construtor com parâmetros
+* Destrutor

@@ -1,0 +1,3 @@
+### 9 - Alterar o exercício anterior para que a classe *Carro* leve em consideração tanto o consumo urbano quanto o consumo em estrada (o método *andar* deve receber um parâmetro que indica se está andando na cidade ou na estrada). Em seguida, implemente um programa que, utilizando esta classe, efetue as seguintes operações:
+* receba do usuário uma quantidade de km e a quantidade de litros que o carro consumiu para andar aquela quantidade de km
+* calcule e mostre quantos km ele andou na estrada e quantos ele andou na cidade.

@@ -1,0 +1,1 @@
+### 2 - Adaptar a classe *Horario* do exercício anterior para inicializar os valores de hora e minuto através de uma construtora. Qual(is) é(são) a(s) alternativa(s) para efetuar a validação dentro da construtora e retornar o status (sucesso ou erro)? Esta construtora poderia ser sobrecarregada de alguma forma?

@@ -1,0 +1,3 @@
+Versão feita com o Visual Studio 2019.
+
+Arquivo de projeto é .sln. 

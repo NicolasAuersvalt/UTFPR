@@ -1,0 +1,3 @@
+### 26 - Desenvolva um sistema no qual existam a classe *Familia* e a classe *Pessoa*. Em seguida, modele e implemente a relação entre *Familia* e *Pessoa* na forma de uma agregação.
+Sugestões de atributos: principal, cônjuge e filhos para *Familia*, pais para *Pessoa*, sobrenome para *Familia*, nome para *Pessoa*.  
+Sugestões de métodos: *listarArvoreFamiliar()* para *Familia*, *getNomeCompleto()* para *Pessoa*, métodos para adicionar filhos à *Familia*, métodos para adicionar filhos à *Pessoa*.
