@@ -1,0 +1,6 @@
+Basicamente passa endereço e recebe em um ponteiro
+
+Calc_Idade ( &Einstein, 24, 8, 2009);
+Calc_Idade ( &Newton, 24, 8, 2009);
+
+void Calc_Idade (struct Pessoa *p, int dia, int mes, int ano)
