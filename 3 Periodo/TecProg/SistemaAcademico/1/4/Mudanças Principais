@@ -1,0 +1,1 @@
+Reescrever p->idade como (*p).idade
