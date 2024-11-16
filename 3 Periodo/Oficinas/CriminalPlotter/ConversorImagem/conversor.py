@@ -18,8 +18,8 @@ def save_matrix_to_file(matrix, filename):
     np.save(filename, matrix)
 
 # Exemplo de uso
-image_path = 'Integral.png'  # Substitua pelo caminho da sua imagem
+image_path = 'teste.png'  # Substitua pelo caminho da sua imagem
 binary_matrix = image_to_matrix(image_path)
-filename = 'in.npy'  # Nome do arquivo onde a matriz será salva
+filename = 'in.txt'  # Nome do arquivo onde a matriz será salva
 save_matrix_to_file(binary_matrix, filename)
 print(f'Matriz salva em: {filename}')
