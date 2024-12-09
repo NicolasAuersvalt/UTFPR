@@ -1,4 +1,5 @@
 import serial
+import os
 import time
 
 char portaArduino = 'COM9'
@@ -20,7 +21,28 @@ def principal():
             pronto = ser.read()
 
         # Acessa a matriz char1char2.txt 
-        
+        file_name = f"{char1.decode()}{char2.decode()}.txt"
+        file_path = os.path.join("/matrizes",file_name)
+
+        # Verifica se o arquivo existe
+        if os.path.exists(file_path):
+            print(f"Lendo a matriz de {file_path}...")
+
+            # Lê o arquivo e armazena a matriz
+            with open(file_path, "r") as a file:
+                matriz = []
+                for line in file:
+                    # Converte cada linha do arquivo em uma linha de inteiros
+                    row = list(map(int, line.split()))
+                    matriz.append(row)
+            
+            # Exibe a matriz lida
+            print("Matriz lida:")
+            for row in matriz:
+                print(row)
+        else:
+            print(f"Arquivo {file_name} não encontrado no diretório /matrizes")
+
         for i in range(matriz.size())
             for j in range(matriz.size())
                 if matriz[i][j] == 1

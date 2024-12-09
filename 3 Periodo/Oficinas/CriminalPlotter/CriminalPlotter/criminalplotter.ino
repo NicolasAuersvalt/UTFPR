@@ -44,6 +44,7 @@ void desenhar(int tecla){
   // while o python enviar valores para x e y
   Serial.print(primeiro);
   Serial.print(segundo);
+  Serial.print("Pronto");
 
   // Enquanto houver dados
    while(Serial.available() >= 8){
@@ -64,7 +65,7 @@ void desenhar(int tecla){
         printar(); // PARA Z
       }
    }
-      
+   Serial.print("OK");
 }
 
 void printar(){ // DESCE A CANETA PRONTO
@@ -231,4 +232,5 @@ void loop() {
 
   delay(1000);  // Pausa de 1 segundo
 }
+
 
