@@ -1,3 +1,4 @@
+ls
 // Definição dos pinos do teclado 3x3
 #define ROW1 12
 #define ROW2 A0
