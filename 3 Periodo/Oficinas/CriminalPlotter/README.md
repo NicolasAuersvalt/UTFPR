@@ -13,6 +13,8 @@ Um dos fatores responsáveis pela baixa resolução de casos é a escassez de re
 
 Para reduzir esses números dramáticos, os autores propõem a criação de uma impressora que esboça retratos criminais de potenciais suspeitos com base em um catálogo físico de traços faceais pré-definidos, evitando a necessidade de ter um artista forense no local.
 
+![Criminal Plotter](images/cp.png)
+
 ## Introdução
 
 Em 2023, o Brasil registrou 47.722 assassinatos em um ano, 10,4% do total mundial. Em homicídios per capita, está na 11ª posição, com 22,38 mortes a cada 100 mil habitantes, quase 1000% da média da OCDE, 400% da média global e 150% da média na América Latina. Em termos de roubos e furtos, o Brasil tem 2.226 para cada 100 mil habitantes. A situação fica ainda mais preocupante quando se considera que a taxa de solução de crimes é 65%, sendo em torno de 35% quando se trata de homicídios.
@@ -20,6 +22,9 @@ Em 2023, o Brasil registrou 47.722 assassinatos em um ano, 10,4% do total mundia
 Um dos fatores responsáveis pela baixa resolução de casos é a escassez de recursos e profissionais: o Brasil tem uma média de 1 perito criminal para cada 41.500 habitantes, sendo que o recomendado pela ONU seria, no mínimo, 1 em cada 5.000. No estado de São Paulo, por exemplo, em um único dia, os especialistas chegam a percorrer 300 km em até 17 locais de crime diferentes, o que significa que muitas ocorrências são deixadas de lado e, nas que não são, não há tempo suficiente para uma análise crítica.
 
 Os autores propõem, portanto, a criação de uma impressora de esboço forense de rosto com fácil operação e baixo custo, visando dar maior autonomia às vítimas e reduzir a excedente demanda por peritos criminais. Esta impressora é baseada em métodos já existentes para retrato criminal forense e reconhecimento facial.
+
+
+![Criminal Plotter](images/cp1.png)
 
 ## Revisão de literatura
 
@@ -29,9 +34,13 @@ Esboços forenses são geralmente utilizados quando não há nenhuma foto ou ví
 
 Após essa etapa, pode-se divulgar a imagem em veículos midiáticos, ou, nos casos de haver mais recurso à disposição, fazer uma busca do rosto esboçado em uma base de dados. Essa pesquisa pode levar em consideração todo o rosto ou apenas alguns de seus componentes. Neste trabalho, no entanto, nos limitaremos apenas à parte de esboço.
 
+![Criminal Plotter](images/cp2.png)
+
 ### O método do esboço
 
 Geralmente preferível a biometria, DNA e outros métodos de identificação pela conveniência e custo relativamente menor, o esboço criminal feito por um artista forense ainda apresenta a inconveniência de necessitar um perito com anos de prática nessa arte disponível, realidade distante do contexto brasileiro. Uma alternativa buscada, portanto, tem sido o esboço composto via software, que está sendo amplamente utilizado desde os anos 2000. No Brasil, no entanto, onde apenas recentemente foi inaugurado um sistema de reconhecimento facial, esse tipo de tecnologia ainda está longe de ser aplicada em larga escala, fazendo-se necessária uma adaptação da técnica para o contexto nacional.
+
+![Criminal Plotter](images/cp3.png)
 
 ### Identificação facial
 
