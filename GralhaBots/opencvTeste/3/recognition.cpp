@@ -32,9 +32,9 @@ class ImageManipulation{
 			Mat B;
 			int x, y;
 
-			// Testar float
+			// Testar float (ESTÁ IMPERFEITO)
 			x = A.cols * proportion/1000;
-			y = A.cols * proportion/1000;
+			y = A.rows * proportion/1000;
 
 			resize(A, B, Size(x,y));
 			A = B;
@@ -49,6 +49,31 @@ class ImageManipulation{
 			cvtColor(A,B,COLOR_BGR2GRAY);
 			A = B;
 		}
+		void process(){
+			// pega o ponto central
+			int midX = A.rows / 2;
+
+			// Pega os valores limites
+			pair<int, int> limites;
+			limites = findLimits(midX);
+				
+		}
+
+		// CONCLUIR LÓGICA COM DENSIDADE
+		pair<int,int> findLimits(int mid){
+			// Função vai considerar a densidade de pontos
+			// então tira uma média desses pontos
+
+			int densEsq=0, densDir=0;
+			// pega à esquerda
+			for(int i=mid; i>0; i--)
+			{
+
+			}
+			
+
+			// pega à direita
+		}
 		void show()
 		{	
 			if(A.empty()){
@@ -56,6 +81,8 @@ class ImageManipulation{
 				return;
 			}
 			imshow("Display window", A);
+			waitKey(0);
+
 		}
 
 
@@ -72,6 +99,7 @@ int main(int argc, char** argv)
 	Image.bwFilter();
 	
 	// pega o ponto central e verifica à esquerda e à direita para pegar as bordas
+	Image.process();
 	
 
 	return 0;
