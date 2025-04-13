@@ -101,8 +101,8 @@ void loop() {
           
       if(matriz[i][j]==1){
         canetar(passoZ, motorZ);
-
       }
+      
     horario = false;
     mover(passo, horario, motorX); // em x
   }

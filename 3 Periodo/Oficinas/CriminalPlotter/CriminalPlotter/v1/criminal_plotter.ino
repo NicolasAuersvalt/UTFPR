@@ -190,11 +190,9 @@ void inicializar(){ // PRONTO
   motor_Z.step(cima);
   delay(tmp2);
   
-  
 }
 
 void setup() {
-
   
   // Configura as linhas e colunas como entradas com pull-up
   pinMode(ROW1, INPUT_PULLUP);
