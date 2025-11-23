@@ -1,0 +1,1 @@
+CREATE INDEX idx_p_size_type ON PART (p_size, p_type);
